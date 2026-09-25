@@ -287,3 +287,13 @@ button.refKpi:focus-visible{outline:3px solid rgba(47,76,155,.2);outline-offset:
 .refKpiArrow{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:#94a3ad;opacity:0;transition:opacity .15s,right .15s}
 button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacity:1;right:9px}
 @media(max-width:650px){.refKpiArrow{opacity:.7;right:8px}}
+
+/* Designed overview hero messaging */
+.refHeroCopy{max-width:650px}
+.heroEyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 10px 6px 7px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(6,28,45,.48);backdrop-filter:blur(8px);color:#dff8f5;font-size:8px;font-weight:800;letter-spacing:.13em;margin-bottom:12px}
+.heroEyebrow span{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#16a6a0;color:white}.heroEyebrow svg{width:12px;height:12px}
+.refHeroCopy h2 em{font-style:normal;color:#8ee7df;position:relative}.refHeroCopy h2 em:after{content:"";position:absolute;left:0;bottom:-5px;width:72px;height:3px;border-radius:3px;background:#27b7ae}
+.heroTrust{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.heroTrust span{display:flex;align-items:center;gap:5px;padding:6px 9px;border-radius:6px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);color:#fff;font-size:8px;font-weight:650}
+.heroTrust svg{width:11px;height:11px;color:#7ee0d8}
+@media(max-width:650px){.heroEyebrow{font-size:6.5px;letter-spacing:.08em}.refHeroCopy h2{font-size:25px!important}.heroTrust{margin-top:12px}.heroTrust span{font-size:7px;padding:5px 7px}}
