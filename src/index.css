@@ -229,3 +229,35 @@ button,input,select,textarea{font-size:inherit}
  .workflow>div{flex:0 0 120px!important}
  .modal{max-height:90vh!important;overflow-y:auto!important}
 }
+
+/* Cross-view visual QA: prevent clipped controls and sunken buttons */
+*{box-sizing:border-box}
+button,a,label,input,select{max-width:100%}
+.panel,.refCard,.enquiryCard,.quoteCard,.jobCard,.assetCard,.reportCard,.activityPanel,.settingCard{overflow:visible}
+.panelhead,.refTitle,.activityPanelHead,.cardTitle{min-height:max-content;height:auto}
+.panelhead button,.refTitle button,.outline,.primary,.editDetails,.inlineSelect{min-height:34px;height:auto;line-height:1.2;display:inline-flex;align-items:center;justify-content:center}
+.dataModule{overflow:visible}
+.dataModule>div:has(table){width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse}
+td,th{vertical-align:middle}
+@media(min-width:651px){
+ .shell>main{min-width:0}
+ .modulehero,.reportsHero,.activityHero,.settingsIntro{min-height:max-content}
+ .panelhead,.refTitle{padding-top:10px;padding-bottom:10px}
+ .dataModule{padding-bottom:18px}
+ .dataModule table{margin-bottom:0}
+}
+@media(max-width:1000px){
+ .shell>main{min-width:0}
+ .detailHero,.customerHero,.quoteHero,.jobHero,.assetHero{max-width:100%;min-width:0}
+ .enquiryGrid,.quoteGrid,.jobGrid,.assetGrid{min-width:0}
+}
+@media(max-width:650px){
+ button{touch-action:manipulation}
+ .panelhead,.refTitle,.activityPanelHead{gap:8px;flex-wrap:wrap}
+ .panelhead button,.refTitle button{flex:0 0 auto}
+ .enquiryGrid,.quoteGrid,.jobGrid,.assetGrid{grid-template-columns:1fr!important}
+ .detailRows>div,.quoteSummary>div,.jobInfo>div,.assetInfo>div{min-width:0}
+ .detailRows b,.quoteSummary b,.jobInfo b,.assetInfo b{overflow-wrap:anywhere}
+ .actionChoices button,.quoteActions button,.jobAction button,.assetAction button{width:100%;min-width:0}
+}
