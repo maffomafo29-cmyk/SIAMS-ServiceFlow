@@ -187,3 +187,9 @@ button,input,select,textarea{font-size:inherit}
 .refSearchResults>button:hover{background:#f3f8fb!important}
 .refSearchResults>button>span{font-size:6px;font-weight:800;text-transform:uppercase;color:#147c73;background:#e8f7f3;padding:4px;border-radius:3px;text-align:center}
 .refSearchResults b{display:block;font-size:8px}.refSearchResults small{display:block;font-size:6.5px;color:#71818e;margin-top:2px}.refSearchResults>button>svg{width:10px!important;color:#80909b}.refSearchResults>p{margin:0;padding:14px;font-size:8px;color:#71818e;text-align:center}
+
+/* Keep the functional overview search visible across dashboard breakpoints. */
+.refTools>.refSearchWrap{display:block!important;width:290px!important;height:36px!important;padding:0!important;background:transparent!important;border-radius:0!important;overflow:visible!important}
+.refTools .refSearchWrap>label{display:flex!important;box-sizing:border-box;width:290px!important;height:36px!important;border-radius:18px!important;background:#fff!important;color:#667684!important;padding:0 12px!important}
+@media(max-width:1000px){.refTools>.refSearchWrap{display:block!important;width:230px!important}.refTools .refSearchWrap>label{display:flex!important;width:230px!important}}
+@media(max-width:650px){.refTools>.refSearchWrap{display:block!important;width:190px!important}.refTools .refSearchWrap>label{display:flex!important;width:190px!important}}
