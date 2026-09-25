@@ -261,3 +261,21 @@ td,th{vertical-align:middle}
  .detailRows b,.quoteSummary b,.jobInfo b,.assetInfo b{overflow-wrap:anywhere}
  .actionChoices button,.quoteActions button,.jobAction button,.assetAction button{width:100%;min-width:0}
 }
+
+/* Compact dashboard search: icon by default, field expands on click */
+.refTools>.refSearchWrap{position:relative!important;width:36px!important;height:36px!important;flex:0 0 36px!important;padding:0!important;background:transparent!important;overflow:visible!important;transition:width .2s ease}
+.refSearchToggle{display:grid!important;place-items:center!important;width:36px!important;height:36px!important;border:0!important;border-radius:50%!important;background:#fff!important;color:#52636f!important;padding:0!important;cursor:pointer}
+.refSearchToggle svg{width:16px!important;height:16px!important}
+.refTools>.refSearchWrap>label{display:none!important}
+.refTools>.refSearchWrap.open{width:326px!important;flex-basis:326px!important}
+.refTools>.refSearchWrap.open>.refSearchToggle{display:none!important}
+.refTools>.refSearchWrap.open>label{display:flex!important;width:326px!important;height:36px!important;border-radius:18px!important;background:#fff!important;padding:0 12px!important}
+.refTools>.refSearchWrap.open .refSearchResults{width:326px!important}
+@media(max-width:650px){
+ .refTools{justify-content:flex-end!important}
+ .refTools>.refSearchWrap{width:40px!important;flex:0 0 40px!important}
+ .refSearchToggle{width:40px!important;height:40px!important}
+ .refTools>.refSearchWrap.open{width:100%!important;flex:1 1 100%!important}
+ .refTools>.refSearchWrap.open>label{width:100%!important;height:40px!important}
+ .refTools>.refSearchWrap.open .refSearchResults{width:100%!important}
+}
