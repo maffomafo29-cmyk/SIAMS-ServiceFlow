@@ -54,3 +54,22 @@ table{font-size:12px;font-variant-numeric:tabular-nums}th{font-size:10px;text-tr
 @media(max-width:1180px){.shell{grid-template-columns:176px 1fr}.nav button,.settings{font-size:12px}.refWork{grid-template-columns:1fr 240px}.refData{grid-template-columns:minmax(0,1.5fr) 240px}.refTools>label{width:230px}.refHeroCopy h2{font-size:30px}.refKpi small{font-size:10px}.refKpi em{font-size:9px}}
 @media(max-width:960px){.shell{grid-template-columns:62px 1fr}.brand>div:last-child,.sidecard,.settings{display:none}.brand{padding:11px}.rbMark{width:38px;height:38px}.nav button{font-size:0;justify-content:center;padding:12px}.refWork{grid-template-columns:1fr}.refRail{grid-template-columns:repeat(3,1fr)!important}.refData{grid-template-columns:1fr}.refPipeline{margin-top:10px}.refEnquiries{height:auto;overflow:auto}.refEnquiries table{min-width:690px}}
 @media(max-width:680px){.shell{display:block}.shell>aside{height:auto;position:static}.brand{height:58px}.nav{display:flex;overflow-x:auto}.nav button{min-width:48px}.shell>main{padding:0 8px 20px}.refHero{height:190px}.refHeroCopy{left:17px;top:65px}.refHeroCopy h2{font-size:24px}.refHeroCopy p{font-size:11px}.refTools>label,.refTools i,.refWeather{display:none}.refKpis{grid-template-columns:1fr 1fr}.refKpi:last-child{grid-column:span 2}.refWork{display:block}.refRail{display:grid!important;grid-template-columns:1fr!important;margin-top:10px}.refTiles{grid-template-columns:1fr 1fr}.refEnquiries table{min-width:650px}}
+
+/* POLISH PASS — typography + alignment only; structure intentionally unchanged */
+:root{font-family:Inter,Arial,sans-serif}
+html,body,#root,.shell,.shell *{font-family:Inter,Arial,sans-serif}
+button,input,select,textarea,option,table,th,td,label{font-family:Inter,Arial,sans-serif!important}
+h1,h2,h3,h4,h5,h6,p,span,b,strong,small,em,i{font-family:Inter,Arial,sans-serif}
+button,input,select,textarea{font-size:inherit}
+.refHeroCopy h2,.refTitle h3,.refQuick h3,.refTour b{font-family:Inter,Arial,sans-serif!important}
+.refKpis{align-items:stretch}.refKpi{min-width:0;align-items:center}.refKpi>div{min-width:0}.refKpi small,.refKpi em{line-height:1.2}.refKpi small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.refTools{height:36px;align-items:center}.refTools>label,.refTools>button,.refTools>span>b{flex:0 0 auto}.refTools>span{height:36px;align-items:center}.refTools i{line-height:1.15}
+.refTitle{box-sizing:border-box;align-items:center}.refTitle h3,.refTitle button{line-height:1}.refTitle button{padding:4px 0}
+.refEnquiries table{table-layout:auto}.refEnquiries th,.refEnquiries td{text-align:left;vertical-align:middle;line-height:1.25}.refEnquiries th:last-child,.refEnquiries td:last-child{text-align:left}.refStatus{display:inline-flex;align-items:center;min-height:22px;line-height:1}
+.refPipeline{display:flex;flex-direction:column}.refPipeline .refTitle{flex:0 0 45px}.refDonut{flex:0 0 auto}.refLegend{margin-top:auto;margin-bottom:12px}.refLegend span{align-items:center;line-height:1.25}.refLegend b{text-align:right}
+.refWork{align-items:start}.refData{align-items:stretch}.refRail{align-self:start}.refTour{align-items:start}.refTour>span{align-self:start}.refTour button{height:27px;justify-content:center;gap:3px}
+.refActivity .refTitle{border-bottom:1px solid #edf1f4}.refAct{min-height:39px}.refAct>div{min-width:0}.refAct b,.refAct span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25}.refAct small{white-space:nowrap;text-align:right}
+.refQuick{display:flex;flex-direction:column}.refQuick button{flex:0 0 34px}.refQuick button span{display:flex;align-items:center}
+.refTiles{align-items:stretch}.refTile{display:flex;flex-direction:column}.refTile>div{flex:0 0 88px}.refTile>b{line-height:1.2}.refTile p{line-height:1.35}.refTile>svg{pointer-events:none}
+.brand{align-items:center}.brand>div:last-child{min-width:0}.brand b,.brand span{line-height:1.15}.nav button,.settings{align-items:center;line-height:1.2}
+.dataModule,.settingsPage{font-family:Inter,Arial,sans-serif}.dataModule table,.settingsPage table{font-family:Inter,Arial,sans-serif}.dataModule input,.dataModule select,.dataModule textarea,.settingsPage input,.settingsPage select,.settingsPage textarea{font-family:Inter,Arial,sans-serif!important}
