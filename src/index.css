@@ -167,3 +167,7 @@ button,input,select,textarea{font-size:inherit}
 .officialBrand .siamsBrandLogo{display:block!important;width:172px!important;height:56px!important;max-width:100%!important;max-height:none!important;object-fit:cover!important;object-position:center 50%!important;border-radius:0!important;transform:none!important;opacity:1!important;visibility:visible!important}
 @media(max-width:1000px){.brand.officialBrand{padding:9px 6px}.officialBrand .siamsBrandLogo{width:100%!important;height:54px!important}}
 @media(max-width:650px){.brand.officialBrand{height:64px;min-height:64px;padding:7px 10px}.officialBrand .siamsBrandLogo{width:172px!important;height:50px!important;max-width:100%!important}}
+
+/* Cropped official logo: artwork ratio 940/370 = 2.54. Fit within 172x56 brand content area. */
+.brand.officialBrand{box-sizing:border-box;width:100%;height:74px;min-height:74px;padding:9px 12px;border-bottom:1px solid #173249;display:flex;align-items:center;justify-content:flex-start;overflow:hidden}
+.officialBrand .siamsBrandLogo{display:block!important;width:142px!important;height:56px!important;max-width:100%!important;max-height:56px!important;object-fit:contain!important;object-position:left center!important;border-radius:0!important;transform:none!important;margin:0!important}
