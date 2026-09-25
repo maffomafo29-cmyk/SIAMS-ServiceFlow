@@ -193,3 +193,39 @@ button,input,select,textarea{font-size:inherit}
 .refTools .refSearchWrap>label{display:flex!important;box-sizing:border-box;width:290px!important;height:36px!important;border-radius:18px!important;background:#fff!important;color:#667684!important;padding:0 12px!important}
 @media(max-width:1000px){.refTools>.refSearchWrap{display:block!important;width:230px!important}.refTools .refSearchWrap>label{display:flex!important;width:230px!important}}
 @media(max-width:650px){.refTools>.refSearchWrap{display:block!important;width:190px!important}.refTools .refSearchWrap>label{display:flex!important;width:190px!important}}
+
+/* Mobile layout repair — keep every workspace readable and scrollable */
+@media(max-width:650px){
+ html,body,#root{width:100%;max-width:100%;overflow-x:hidden}
+ .shell{display:block!important;width:100%;min-width:0}
+ .shell>aside{position:sticky!important;top:0!important;z-index:80!important;width:100%!important;height:auto!important;min-height:0!important;padding:0!important;overflow:visible!important;background:#071b2d!important}
+ .brand.officialBrand{display:none!important}
+ .nav{display:flex!important;width:100%!important;max-width:100vw!important;overflow-x:auto!important;overflow-y:hidden!important;gap:0!important;padding:0 8px!important;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+ .nav::-webkit-scrollbar{display:none}
+ .nav button{display:flex!important;flex:0 0 64px!important;min-width:64px!important;height:64px!important;padding:0!important;justify-content:center!important;font-size:0!important;border-radius:0!important}
+ .nav button svg{width:22px!important;height:22px!important}
+ .settings{display:flex!important;flex:0 0 64px!important;min-width:64px!important;height:64px!important;margin:0!important;justify-content:center!important;font-size:0!important}
+ .sidecard,.sideEmergency{display:none!important}
+ .shell>main{width:100%!important;max-width:100%!important;min-width:0!important;padding:16px 12px 34px!important;margin:0!important;overflow:visible!important}
+ .refDashboard,.moduleWorkspace,.reportsWorkspace,.activityWorkspace,.settingsPage,.dataModule{width:100%!important;max-width:100%!important;min-width:0!important}
+ .refHero{height:auto!important;min-height:260px!important;border-radius:10px!important}
+ .refHeroCopy{left:18px!important;right:18px!important;top:82px!important}
+ .refHeroCopy h2{font-size:27px!important;line-height:1.08!important}
+ .refTools{left:14px!important;right:14px!important;top:14px!important;width:auto!important}
+ .refTools>.refSearchWrap{display:block!important;width:100%!important;flex:1!important}
+ .refTools .refSearchWrap>label{display:flex!important;width:100%!important;height:40px!important}
+ .refTools>button,.refTools>span{display:none!important}
+ .refSearchResults{left:0!important;right:0!important;width:100%!important;max-height:55vh!important}
+ .refKpis{grid-template-columns:1fr 1fr!important;gap:8px!important}
+ .refKpi{height:auto!important;min-height:74px!important}
+ .refWork,.refData,.reportGrid,.priorityGrid{display:grid!important;grid-template-columns:1fr!important}
+ .refCard,.panel,.dataModule,.activityPanel,.reportCard{min-width:0!important;max-width:100%!important}
+ .refEnquiries{height:auto!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+ .refEnquiries table,.dataModule table{min-width:680px!important}
+ .dataModule{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+ .modulehero,.reportsHero,.activityHero,.settingsIntro{flex-wrap:wrap!important;padding:18px!important}
+ .modulehero>div,.reportsHero>div,.activityHero>div{min-width:0!important}
+ .workflow{overflow-x:auto!important;-webkit-overflow-scrolling:touch;justify-content:flex-start!important;padding:28px 4px!important}
+ .workflow>div{flex:0 0 120px!important}
+ .modal{max-height:90vh!important;overflow-y:auto!important}
+}
