@@ -579,3 +579,17 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refTiles{grid-template-columns:repeat(4,minmax(0,1fr))}
  .refTile{min-height:150px}
 }
+
+/* Operations overview: use space for operational data, not marketing content */
+@media (min-width:1001px){
+ .refData{grid-template-columns:minmax(0,1.85fr) minmax(290px,.75fr)}
+ .refEnquiries{overflow:visible}
+ .refEnquiries table{min-width:0;width:100%;table-layout:fixed}
+ .refEnquiries th,.refEnquiries td{white-space:normal;overflow:visible;overflow-wrap:break-word}
+ .refEnquiries th:nth-child(1),.refEnquiries td:nth-child(1){width:14%;min-width:0}
+ .refEnquiries th:nth-child(2),.refEnquiries td:nth-child(2){width:22%;min-width:0}
+ .refEnquiries th:nth-child(3),.refEnquiries td:nth-child(3){width:29%;min-width:0}
+ .refEnquiries th:nth-child(4),.refEnquiries td:nth-child(4){width:14%;min-width:0}
+ .refEnquiries th:nth-child(5),.refEnquiries td:nth-child(5){width:21%;min-width:0}
+ .refStatus{max-width:100%;white-space:normal}
+}
