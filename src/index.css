@@ -822,3 +822,10 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 .officialBrand .siamsBrandWords b{font-size:18px!important;line-height:1!important;letter-spacing:.015em!important;white-space:nowrap!important}
 .officialBrand .siamsBrandWords span{font-size:5.5px!important;line-height:1.25!important;letter-spacing:.02em!important;white-space:nowrap!important;color:#d7e1e7!important;margin-top:3px!important}
 @media(max-width:1000px){.brand.officialBrand{padding:8px 7px!important;gap:6px!important}.officialBrand .siamsRoundLogo{width:46px!important;height:46px!important;flex-basis:46px!important}.officialBrand .siamsBrandWords b{font-size:16px!important}}
+
+/* Correct SIAMS sidebar lockup: emblem must read as a round badge, not a tiny clipped square */
+.brand.officialBrand{height:78px!important;min-height:78px!important;padding:8px 8px!important;gap:8px!important;overflow:visible!important}
+.officialBrand .siamsRoundLogo{width:54px!important;height:54px!important;min-width:54px!important;flex:0 0 54px!important;object-fit:contain!important;object-position:center!important;border-radius:50%!important;background:#eef1f2!important}
+.officialBrand .siamsBrandWords{overflow:visible!important}
+.officialBrand .siamsBrandWords b{font-size:17px!important;line-height:1!important}
+.officialBrand .siamsBrandWords span{font-size:5px!important;line-height:1.15!important}
