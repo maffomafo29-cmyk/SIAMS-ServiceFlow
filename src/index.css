@@ -544,3 +544,38 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refActivity{height:auto;min-height:270px}.refAct{grid-template-columns:16px minmax(0,1fr) 54px;min-height:51px;padding:9px 10px}.refAct b{font-size:14px!important;line-height:1.25!important}.refAct span,.refAct small{font-size:12px!important;line-height:1.3!important}
  .refQuick{height:auto;min-height:190px}.refQuick button{height:36px;font-size:13px}
 }
+
+/* Readable type + resilient overview layout: never hide content to make it fit */
+@media (min-width:1001px){
+ .shell>main{overflow:visible}
+ .refWork{grid-template-columns:minmax(0,1fr) minmax(300px,340px);gap:12px;align-items:start}
+ .refMain,.refData,.refCard,.refRail{min-width:0}
+ .refData{grid-template-columns:minmax(620px,1.65fr) minmax(300px,.85fr);gap:12px}
+ .refEnquiries{overflow-x:auto;overflow-y:visible}
+ .refEnquiries table{min-width:720px;table-layout:auto}
+ .refEnquiries th,.refEnquiries td{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.3}
+ .refEnquiries th:nth-child(1),.refEnquiries td:nth-child(1){min-width:96px}
+ .refEnquiries th:nth-child(2),.refEnquiries td:nth-child(2){min-width:150px}
+ .refEnquiries th:nth-child(3),.refEnquiries td:nth-child(3){min-width:165px}
+ .refEnquiries th:nth-child(4),.refEnquiries td:nth-child(4){min-width:82px}
+ .refEnquiries th:nth-child(5),.refEnquiries td:nth-child(5){min-width:125px}
+ .refStatus{display:inline-block;white-space:normal;line-height:1.2}
+ .refTitle{gap:10px}.refTitle h3{min-width:0}.refTitle button{flex:0 0 auto;white-space:nowrap}
+ .refActivity{overflow:visible}
+ .refAct{grid-template-columns:16px minmax(0,1fr) 52px}
+ .refAct>div{min-width:0}
+ .refAct b,.refAct span{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere}
+ .refAct small{white-space:nowrap}
+ .refTiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .refTile{height:auto;min-height:160px;overflow:visible}
+ .refTile>div{height:82px}
+ .refTile>b,.refTile p{white-space:normal;overflow:visible;text-overflow:clip}
+ .refQuick{overflow:visible}
+ .refQuick button{height:auto;min-height:38px;white-space:normal}
+}
+@media (min-width:1350px){
+ .refWork{grid-template-columns:minmax(0,1fr) 310px}
+ .refData{grid-template-columns:minmax(0,1.7fr) minmax(300px,.8fr)}
+ .refTiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .refTile{min-height:150px}
+}
