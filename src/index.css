@@ -784,3 +784,24 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refDropPanel{position:fixed;left:12px;right:12px;top:70px;width:auto}
  .refWeather{right:14px;bottom:12px}.refWeather i{display:none}.refWeather b{font-size:17px}
 }
+
+/* Repair overview hero top-right controls after interactive wrappers */
+.refTools{display:flex!important;align-items:center!important;gap:8px!important;right:18px!important;top:13px!important;width:auto!important;overflow:visible!important}
+.refTools>.refSearchWrap{width:44px!important;height:44px!important;flex:0 0 44px!important;padding:0!important;background:transparent!important}
+.refTools>.refActionWrap{display:flex!important;width:auto!important;height:44px!important;flex:0 0 auto!important;padding:0!important;background:transparent!important;border-radius:0!important;overflow:visible!important}
+.refTools>.refActionWrap>button:not(.refAdminButton){display:grid!important;place-items:center!important;width:44px!important;height:44px!important;flex:0 0 44px!important;border:0!important;border-radius:50%!important;background:#fff!important;color:#52636f!important;padding:0!important}
+.refTools .refAdminButton{display:flex!important;align-items:center!important;gap:8px!important;width:auto!important;height:44px!important;min-width:154px!important;padding:0 10px 0 5px!important;border:0!important;border-radius:22px!important;background:rgba(8,31,48,.76)!important;color:#fff!important}
+.refTools .refAdminButton>b{width:34px!important;height:34px!important;flex:0 0 34px!important;border-radius:50%!important;background:#0d5b9d!important;display:grid!important;place-items:center!important;font-size:10px!important}
+.refTools .refAdminButton i{display:block!important;font-size:11px!important;line-height:1.15!important;text-align:left!important;white-space:nowrap!important}
+.refTools .refAdminButton small{display:block!important;font-size:10px!important;color:#d4e0e6!important;margin-top:2px!important}
+.refWeather{right:18px!important;bottom:18px!important;width:auto!important;min-width:145px!important;max-width:190px!important;padding:9px 12px!important;background:#122a3edb!important;border-radius:6px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:9px!important;color:#fff!important;text-align:left!important;overflow:hidden!important}
+.refWeather span{display:flex!important;align-items:center!important;gap:7px!important;min-width:0}
+.refWeather b{font-size:18px!important;white-space:nowrap!important}.refWeather small{font-size:10px!important;white-space:nowrap!important}.refWeather i{font-size:9px!important;white-space:nowrap!important;padding-left:8px!important}
+@media(max-width:650px){
+ .refTools{left:16px!important;right:16px!important;top:14px!important;gap:6px!important}
+ .refTools>.refSearchWrap,.refTools>.refActionWrap,.refTools>.refActionWrap>button:not(.refAdminButton){height:40px!important}
+ .refTools>.refSearchWrap,.refTools>.refActionWrap>button:not(.refAdminButton){width:40px!important;flex-basis:40px!important}
+ .refTools .refAdminButton{height:40px!important;min-width:40px!important;width:40px!important;padding:3px!important;border-radius:50%!important}
+ .refTools .refAdminButton>b{width:34px!important;height:34px!important}.refTools .refAdminButton i{display:none!important}
+ .refWeather{right:14px!important;bottom:12px!important;min-width:0!important;width:auto!important;padding:7px 9px!important}.refWeather i{display:none!important}
+}
