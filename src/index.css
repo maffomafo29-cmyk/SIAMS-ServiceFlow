@@ -896,3 +896,41 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 html,body,#root,button,input,select,textarea,table,th,td,label{
   font-family:Arial,Helvetica,sans-serif!important;
 }
+
+/* Full detail-view typography audit — Overview readability is the baseline */
+.customerDetail,.enquiryDetail,.quoteDetail,.jobDetail,.equipmentDetail,
+.customerDetail button,.enquiryDetail button,.quoteDetail button,.jobDetail button,.equipmentDetail button,
+.customerDetail input,.enquiryDetail input,.quoteDetail input,.jobDetail input,.equipmentDetail input,
+.customerDetail select,.enquiryDetail select,.quoteDetail select,.jobDetail select,.equipmentDetail select{
+  font-family:Arial,Helvetica,sans-serif!important;
+}
+.customerDetail small,.customerDetail span,
+.enquiryDetail small,.enquiryDetail span,
+.quoteDetail small,.quoteDetail span,
+.jobDetail small,.jobDetail span,
+.equipmentDetail small,.equipmentDetail span{font-size:12px!important;line-height:1.4!important}
+.customerDetail b,.customerDetail strong,
+.enquiryDetail b,.enquiryDetail strong,
+.quoteDetail b,.quoteDetail strong,
+.jobDetail b,.jobDetail strong,
+.equipmentDetail b,.equipmentDetail strong{font-size:14px!important;line-height:1.35!important}
+.customerDetail p,.enquiryDetail p,.quoteDetail p,.jobDetail p,.equipmentDetail p{font-size:14px!important;line-height:1.5!important}
+.customerDetail h3,.enquiryDetail h3,.quoteDetail h3,.jobDetail h3,.equipmentDetail h3,
+.cardTitle h3{font-size:16px!important;line-height:1.25!important}
+.customerDetail button,.enquiryDetail button,.quoteDetail button,.jobDetail button,.equipmentDetail button,
+.customerDetail input,.enquiryDetail input,.quoteDetail input,.jobDetail input,.equipmentDetail input,
+.customerDetail select,.enquiryDetail select,.quoteDetail select,.jobDetail select,.equipmentDetail select{font-size:13px!important}
+.detailRows span,.quoteSummary span,.jobInfo span,.assetInfo span{font-size:12px!important}
+.detailRows b,.quoteSummary b,.jobInfo b,.assetInfo b{font-size:14px!important}
+.cardTitle small,.workflowStrip small,.quoteProgress b,.serviceJourney b,.assetLifecycle b,.assetLifecycle small{font-size:12px!important}
+.actionChoices b,.quoteActions b,.jobAction b,.assetAction b,.completeBox b,.quoteOutcome b,.jobComplete b,.scheduledBox b{font-size:14px!important}
+.actionChoices small,.quoteActions small,.jobAction small,.assetAction small,.completeBox span,.quoteOutcome span,.jobComplete span,.scheduledBox span{font-size:12px!important}
+.quoteHero span,.quoteHero p,.quoteValue small,.jobHero span,.jobHero p,.equipmentHero span,.equipmentHero p,.equipmentDue small{font-size:12px!important}
+.quoteHero h1,.jobHero h1,.equipmentHero h1{font-size:26px!important}
+.jobBoardMain small,.jobBoardMeta small{font-size:12px!important}.jobBoardMain b{font-size:14px!important}.jobBoardMain span{font-size:13px!important}
+.dateChip,.decisionRow button,.quoteOutcome button{font-size:12px!important}
+.workflowStrip b,.processVisual>div b{font-size:13px!important}
+@media(max-width:650px){
+ .customerDetail small,.customerDetail span,.enquiryDetail small,.enquiryDetail span,.quoteDetail small,.quoteDetail span,.jobDetail small,.jobDetail span,.equipmentDetail small,.equipmentDetail span{font-size:12px!important}
+ .customerDetail b,.enquiryDetail b,.quoteDetail b,.jobDetail b,.equipmentDetail b{font-size:14px!important}
+}
