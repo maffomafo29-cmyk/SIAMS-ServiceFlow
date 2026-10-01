@@ -829,3 +829,17 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 .officialBrand .siamsBrandWords{overflow:visible!important}
 .officialBrand .siamsBrandWords b{font-size:17px!important;line-height:1!important}
 .officialBrand .siamsBrandWords span{font-size:5px!important;line-height:1.15!important}
+
+/* SIAMS emblem system: fill circular holders without crossing their edges */
+.officialBrand .siamsRoundLogo{padding:0!important;object-fit:contain!important;object-position:center!important;background:transparent!important;clip-path:circle(50% at 50% 50%)!important}
+.adminLogoCircle,.tourLogoCircle{overflow:hidden!important;border-radius:50%!important;padding:0!important;display:grid!important;place-items:center!important}
+.adminLogoCircle img,.tourLogoCircle img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;transform:scale(1.08)!important}
+.refTools .refAdminButton>.adminLogoCircle{width:34px!important;height:34px!important;flex:0 0 34px!important;background:#fff!important}
+.refTour>.tourLogoCircle{width:38px!important;height:38px!important;min-width:38px!important;background:#fff!important}
+.sidecard{position:relative!important;overflow:hidden!important}
+.sidecard:before,.sidecard:after{content:none!important;display:none!important}
+.sidecard .sidecardWatermark{display:block!important;position:absolute!important;width:82px!important;height:82px!important;right:-7px!important;bottom:-9px!important;object-fit:contain!important;opacity:.13!important;pointer-events:none!important}
+.sidecard .sidecardCopy{position:relative!important;z-index:1!important;display:block!important;padding:11px 13px!important}
+.sidecard .sidecardCopy small{display:block!important;color:#9aa6af!important;font-size:7px!important;letter-spacing:.16em!important;font-weight:700!important;margin-bottom:20px!important}
+.sidecard .sidecardCopy b{display:block!important;color:#fff!important;font-size:17px!important;line-height:.9!important;font-weight:900!important;letter-spacing:-.025em!important}
+@media(max-width:650px){.sidecard .sidecardWatermark{width:70px!important;height:70px!important}.refTour>.tourLogoCircle{width:34px!important;height:34px!important;min-width:34px!important}}
