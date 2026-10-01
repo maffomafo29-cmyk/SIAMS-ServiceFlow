@@ -852,3 +852,6 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 .refTour>.tourLogoCircle img{display:block!important;width:140%!important;height:140%!important;max-width:none!important;object-fit:cover!important;transform:none!important}
 .sidecard .sidecardWatermark{display:block!important;visibility:visible!important;opacity:.14!important;width:105px!important;height:105px!important;max-width:none!important;right:-18px!important;bottom:-17px!important;object-fit:cover!important;transform:scale(1.12)!important;z-index:0!important}
 .sidecard .sidecardCopy{position:relative!important;z-index:2!important}
+
+/* Improve secondary SIAMS brand line readability without competing with SIAMS RB */
+.officialBrand .siamsBrandWords span{font-size:7px!important;line-height:1.15!important;letter-spacing:.015em!important;font-weight:600!important;margin-top:3px!important}
