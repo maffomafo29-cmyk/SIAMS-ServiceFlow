@@ -843,3 +843,12 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 .sidecard .sidecardCopy small{display:block!important;color:#9aa6af!important;font-size:7px!important;letter-spacing:.16em!important;font-weight:700!important;margin-bottom:20px!important}
 .sidecard .sidecardCopy b{display:block!important;color:#fff!important;font-size:17px!important;line-height:.9!important;font-weight:900!important;letter-spacing:-.025em!important}
 @media(max-width:650px){.sidecard .sidecardWatermark{width:70px!important;height:70px!important}.refTour>.tourLogoCircle{width:34px!important;height:34px!important;min-width:34px!important}}
+
+/* Correct logo rendering: transparent PNG contains whitespace, so crop the image inside masked holders */
+.officialBrand .siamsRoundLogo{object-fit:cover!important;transform:scale(1.32)!important;clip-path:circle(38% at 50% 50%)!important}
+.refTools .refAdminButton>.adminLogoCircle{overflow:hidden!important;background:#fff!important}
+.refTools .refAdminButton>.adminLogoCircle img{width:140%!important;height:140%!important;max-width:none!important;object-fit:cover!important;transform:none!important}
+.refTour>.tourLogoCircle{overflow:hidden!important;background:#fff!important}
+.refTour>.tourLogoCircle img{display:block!important;width:140%!important;height:140%!important;max-width:none!important;object-fit:cover!important;transform:none!important}
+.sidecard .sidecardWatermark{display:block!important;visibility:visible!important;opacity:.14!important;width:105px!important;height:105px!important;max-width:none!important;right:-18px!important;bottom:-17px!important;object-fit:cover!important;transform:scale(1.12)!important;z-index:0!important}
+.sidecard .sidecardCopy{position:relative!important;z-index:2!important}
