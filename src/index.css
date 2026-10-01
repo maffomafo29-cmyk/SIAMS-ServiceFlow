@@ -622,3 +622,26 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 /* Latest enquiries is primary; summary/action cards follow underneath */
 .refEnquiriesWide{margin-bottom:12px}
 .refTopCards{margin-top:0;margin-bottom:0}
+
+/* Final overview controls + readable module baseline */
+@media (min-width:1001px){
+ .heroEyebrow{font-size:14px!important;line-height:1.2;letter-spacing:.09em;font-weight:800;padding:7px 12px!important}
+ .heroEyebrow>span{width:24px!important;height:24px!important}.heroEyebrow svg{width:14px!important}
+ .refTools{gap:9px;align-items:center}
+ .refTools>.refSearchWrap{width:44px;height:44px;border-radius:22px}
+ .refTools>.refSearchWrap.open{width:330px}
+ .refSearchToggle,.refTools>button{width:44px!important;height:44px!important;border-radius:50%!important;display:grid!important;place-items:center!important}
+ .refTools svg{width:19px!important;height:19px!important}
+ .refTools>span{min-height:44px;padding:5px 12px 5px 5px!important;border-radius:24px!important;gap:8px!important}
+ .refTools>span>b{width:34px!important;height:34px!important;font-size:12px!important}
+ .refTools i{font-size:12px!important;line-height:1.2;font-weight:700}.refTools small{font-size:11px!important;line-height:1.25;margin-top:2px}
+ .moduleBanner{min-height:138px;padding:25px 28px;gap:17px}
+ .moduleIcon{width:58px;height:58px}.moduleIcon svg{width:28px}
+ .moduleBanner small{font-size:12px;line-height:1.2}.moduleBanner h2{font-size:27px;line-height:1.1;margin:5px 0 7px}.moduleBanner p{font-size:14px;line-height:1.4}
+ .moduleSummary>div{min-height:82px;padding:13px 14px;grid-template-columns:42px 1fr;column-gap:11px}
+ .sumIcon{width:42px;height:42px}.sumIcon svg{width:20px}.moduleSummary b{font-size:14px!important}.moduleSummary small{font-size:12px!important;line-height:1.3}
+ .visualTable table{font-size:14px}.visualTable th{font-size:12px;padding:11px 10px}.visualTable td{font-size:14px;padding:14px 10px;white-space:normal;line-height:1.35}
+ .visualTable td small{font-size:12px;line-height:1.3}.visualTable .badge{font-size:12px;padding:6px 9px}
+ .inlineSelect{font-size:13px;padding:8px 10px}.miniAction{font-size:12px!important;line-height:1.25!important;white-space:normal!important}
+ .jobBoardCard{min-height:82px}.jobBoardMain small,.jobBoardMeta small{font-size:12px!important}.jobBoardMain b{font-size:15px!important}.jobBoardMain span{font-size:13px!important}.jobBoardMeta .badge{font-size:12px!important}
+}
