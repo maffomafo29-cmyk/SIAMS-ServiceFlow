@@ -855,3 +855,6 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 
 /* Improve secondary SIAMS brand line readability without competing with SIAMS RB */
 .officialBrand .siamsBrandWords span{font-size:7px!important;line-height:1.15!important;letter-spacing:.015em!important;font-weight:600!important;margin-top:3px!important}
+
+/* Restore sidebar circular logo fit from before the later crop override */
+.officialBrand .siamsRoundLogo{padding:0!important;object-fit:contain!important;object-position:center!important;background:transparent!important;clip-path:circle(50% at 50% 50%)!important;transform:none!important}
