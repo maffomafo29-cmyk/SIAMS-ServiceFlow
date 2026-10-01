@@ -765,3 +765,22 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .settingBody label:not(.checkRow),.toggleRow{font-size:13px!important}
  .settingBody input:not([type=checkbox]),.settingBody select{font-size:16px!important}
 }
+
+/* Top-right actions: preserve original appearance; add behavior only */
+.refHero{position:relative}
+.refTools{z-index:20}
+.refActionWrap{position:relative;display:flex;align-items:center}
+.refActionWrap>button:not(.refAdminButton){width:44px!important;height:44px!important;border-radius:50%!important}
+.refAdminButton{font:inherit;cursor:pointer}
+.refAdminButton>b,.refAdminButton i,.refAdminButton small{pointer-events:none}
+.refDropPanel{position:absolute;right:0;top:52px;width:330px;padding:10px;background:#fff;color:#172936;border:1px solid #dce5e9;border-radius:12px;box-shadow:0 18px 44px rgba(3,18,29,.22);z-index:80}
+.refDropHead{padding:6px 7px 10px;border-bottom:1px solid #edf1f3}.refDropHead b{display:block;font-size:15px}.refDropHead small{display:block;margin-top:2px;font-size:12px;color:#73838d}
+.refDropPlaceholder,.refAccountAction{display:grid;grid-template-columns:34px minmax(0,1fr);gap:9px;align-items:center;padding:12px 7px}
+.refDropPlaceholder>svg,.refAccountAction>svg:first-child{width:18px}.refDropPlaceholder b,.refAccountAction b{display:block;font-size:13px}.refDropPlaceholder small,.refAccountAction small{display:block;margin-top:3px;font-size:12px;line-height:1.4;color:#72838c}
+.refAccountAction{width:100%;grid-template-columns:34px minmax(0,1fr) 16px;border:0;background:transparent;text-align:left;color:inherit;border-radius:8px;cursor:pointer}.refAccountAction:hover{background:#f4f7f9}
+.refWeather{position:absolute;right:22px;bottom:18px;display:flex;align-items:end;gap:10px;color:#fff;text-align:right;z-index:4;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.refWeather span{display:flex;align-items:baseline;gap:7px}.refWeather b{font-size:20px;line-height:1}.refWeather small,.refWeather i{font-size:11px;font-style:normal;opacity:.88}.refWeather i{padding-left:10px;border-left:1px solid rgba(255,255,255,.35)}
+@media(max-width:650px){
+ .refDropPanel{position:fixed;left:12px;right:12px;top:70px;width:auto}
+ .refWeather{right:14px;bottom:12px}.refWeather i{display:none}.refWeather b{font-size:17px}
+}
