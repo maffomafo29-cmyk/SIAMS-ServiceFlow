@@ -645,3 +645,63 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .inlineSelect{font-size:13px;padding:8px 10px}.miniAction{font-size:12px!important;line-height:1.25!important;white-space:normal!important}
  .jobBoardCard{min-height:82px}.jobBoardMain small,.jobBoardMeta small{font-size:12px!important}.jobBoardMain b{font-size:15px!important}.jobBoardMain span{font-size:13px!important}.jobBoardMeta .badge{font-size:12px!important}
 }
+
+/* Search uses exactly the same circular control footprint as notifications */
+.refTools>.refSearchWrap{width:44px!important;height:44px!important;flex:0 0 44px!important;border-radius:50%!important}
+.refSearchToggle{width:44px!important;height:44px!important;border-radius:50%!important;background:#fff!important;box-shadow:0 8px 22px rgba(3,19,31,.16)!important}
+.refTools>button{width:44px!important;height:44px!important;border-radius:50%!important;padding:0!important}
+.refTools>.refSearchWrap.open{width:330px!important;flex-basis:330px!important;border-radius:22px!important}
+
+/* Reports, Maintenance and Activity: normal readable application typography */
+.reportsHero>div:nth-child(2)>span,.maintenanceBanner>div:nth-child(2)>span,.activityHero>div:nth-child(2)>span{font-size:12px!important}
+.reportsHero h2,.maintenanceBanner h2,.activityHero h2{font-size:28px!important;line-height:1.15}
+.reportsHero p,.maintenanceBanner p,.activityHero p{font-size:14px!important;line-height:1.45}
+.reportPeriod small,.reportPeriod span,.maintenanceToday small,.maintenanceToday span,.activityCount small,.activityCount span{font-size:12px!important}
+.reportPeriod b,.maintenanceToday strong,.activityCount strong{font-size:18px!important}
+.reportKpi strong,.maintenanceStats b,.activityStats b{font-size:22px!important}
+.reportKpi b{font-size:14px!important}.reportKpi small,.maintenanceStats small,.activityStats small{font-size:12px!important}
+.reportHead small,.mcHead small,.activityPanelHead>div>span{font-size:12px!important}
+.reportHead h3,.mcHead h3,.activityPanelHead h3{font-size:17px!important}
+.reportHead>b{font-size:15px!important}
+.reportBar span,.reportBar b,.ringLegend span,.ringLegend b{font-size:13px!important}
+.reportHighlight small,.priority small,.maintenanceFooter span{font-size:12px!important}
+.reportHighlight b,.priority b,.maintenanceFooter b{font-size:16px!important}
+.priority p,.maintenanceFooter p{font-size:13px!important;line-height:1.4}
+.maintenanceTicket .ticketTop span,.maintenanceTicket .badge,.ticketMeta span{font-size:12px!important}
+.maintenanceTicket>b{font-size:15px!important}.maintenanceTicket p{font-size:13px!important}.maintenanceTicket button{font-size:13px!important}
+.mcEmpty b{font-size:14px!important}.mcEmpty span{font-size:12px!important}
+.activityPanel .badge{font-size:12px!important}
+.activityEventMain b{font-size:14px!important}.activityEventMain span,.activityEventMain small,.activityEvent time{font-size:12px!important;line-height:1.35}
+.activityEmpty b{font-size:15px!important}.activityEmpty span{font-size:13px!important}
+
+/* Mobile/tablet alignment and readable scale */
+@media(max-width:1000px){
+ .refTools{display:flex!important;align-items:center!important;gap:8px!important}
+ .refTools>.refSearchWrap,.refSearchToggle,.refTools>button{width:40px!important;height:40px!important;flex:0 0 40px!important}
+ .refTools>span{min-height:40px!important}
+ .reportsHero,.maintenanceBanner,.activityHero{gap:12px;align-items:center}
+ .reportKpis,.maintenanceStats,.activityStats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .reportGrid{grid-template-columns:1fr!important}
+ .maintenanceBoard{grid-template-columns:1fr!important}
+}
+@media(max-width:650px){
+ .refHero{min-height:260px;height:auto;padding-bottom:18px}
+ .refHeroCopy{position:relative!important;left:auto!important;top:auto!important;padding:72px 18px 18px}
+ .refTools{left:16px!important;right:16px!important;top:14px!important;justify-content:flex-end!important}
+ .refTools>span{max-width:170px}
+ .refTools i{font-size:11px!important}.refTools small{font-size:10px!important}
+ .refTools>.refSearchWrap.open{position:absolute!important;left:0!important;right:0!important;top:0!important;width:100%!important;flex-basis:auto!important;z-index:20}
+ .refTools>.refSearchWrap.open>label,.refTools>.refSearchWrap.open .refSearchResults{width:100%!important}
+ .heroEyebrow{font-size:12px!important;max-width:100%;white-space:normal}
+ .refHeroCopy h2{font-size:28px!important}.refHeroCopy p{font-size:13px!important}
+ .reportsHero,.maintenanceBanner,.activityHero{padding:18px!important;flex-wrap:wrap}
+ .reportsHeroIcon,.maintenanceBannerIcon,.activityHeroIcon{width:46px!important;height:46px!important}
+ .reportsHero>div:nth-child(2),.maintenanceBanner>div:nth-child(2),.activityHero>div:nth-child(2){min-width:0;flex:1 1 220px}
+ .reportPeriod,.maintenanceToday,.activityCount{width:100%;min-width:0}
+ .reportsHero h2,.maintenanceBanner h2,.activityHero h2{font-size:24px!important}
+ .reportsHero p,.maintenanceBanner p,.activityHero p{font-size:13px!important}
+ .reportKpis,.maintenanceStats,.activityStats{grid-template-columns:1fr!important}
+ .priorityGrid{grid-template-columns:1fr!important}
+ .activityEvent{grid-template-columns:40px minmax(0,1fr)!important;gap:10px!important}
+ .activityEvent time{grid-column:2;text-align:left!important}
+}
