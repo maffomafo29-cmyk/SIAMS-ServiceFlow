@@ -593,3 +593,28 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refEnquiries th:nth-child(5),.refEnquiries td:nth-child(5){width:21%;min-width:0}
  .refStatus{max-width:100%;white-space:normal}
 }
+
+/* Overview information architecture: summary cards on top, enquiries full width below */
+.refWork{display:block}
+.refTopCards{display:grid;grid-template-columns:1.05fr .95fr 1.25fr .95fr;gap:10px;align-items:stretch;margin-bottom:12px}
+.refTopCards .refPipeline,.refTopCards .refTour,.refTopCards .refActivity,.refTopCards .refQuick{height:auto;min-height:220px;margin:0}
+.refTopCards .refTour{border-radius:4px}
+.refTopCards .refActivity{overflow:visible}
+.refTopCards .refQuick{padding:12px}
+.refEnquiriesWide{width:100%;height:auto;min-height:0;overflow:visible}
+.refEnquiriesWide table{width:100%;min-width:0;table-layout:fixed}
+.refEnquiriesWide th:nth-child(1),.refEnquiriesWide td:nth-child(1){width:13%}
+.refEnquiriesWide th:nth-child(2),.refEnquiriesWide td:nth-child(2){width:23%}
+.refEnquiriesWide th:nth-child(3),.refEnquiriesWide td:nth-child(3){width:31%}
+.refEnquiriesWide th:nth-child(4),.refEnquiriesWide td:nth-child(4){width:13%}
+.refEnquiriesWide th:nth-child(5),.refEnquiriesWide td:nth-child(5){width:20%}
+@media(max-width:1200px) and (min-width:651px){
+ .refTopCards{grid-template-columns:1fr 1fr}
+ .refTopCards .refPipeline,.refTopCards .refTour,.refTopCards .refActivity,.refTopCards .refQuick{min-height:0}
+}
+@media(max-width:650px){
+ .refTopCards{grid-template-columns:1fr}
+ .refTopCards .refPipeline,.refTopCards .refTour,.refTopCards .refActivity,.refTopCards .refQuick{min-height:0}
+ .refEnquiriesWide{overflow-x:auto}
+ .refEnquiriesWide table{min-width:700px}
+}
