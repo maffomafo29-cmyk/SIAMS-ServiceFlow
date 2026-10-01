@@ -891,3 +891,8 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
   opacity:.11!important;
   clip-path:none!important;
 }
+
+/* Global typography: sans-serif only; preserve all existing sizing, spacing and layout */
+html,body,#root,button,input,select,textarea,table,th,td,label{
+  font-family:Arial,Helvetica,sans-serif!important;
+}
