@@ -858,3 +858,36 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 
 /* Restore sidebar circular logo fit from before the later crop override */
 .officialBrand .siamsRoundLogo{padding:0!important;object-fit:contain!important;object-position:center!important;background:transparent!important;clip-path:circle(50% at 50% 50%)!important;transform:none!important}
+
+/* Final logo fit: show the complete transparent emblem inside every holder, no crop and no overlap */
+.officialBrand .siamsRoundLogo,
+.refTools .refAdminButton>.adminLogoCircle img,
+.refTour>.tourLogoCircle img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  clip-path:none!important;
+  margin:0!important;
+}
+.officialBrand .siamsRoundLogo{width:54px!important;height:54px!important;flex:0 0 54px!important;border-radius:50%!important;background:transparent!important}
+.refTools .refAdminButton>.adminLogoCircle{width:34px!important;height:34px!important;flex:0 0 34px!important;border-radius:50%!important;background:transparent!important;overflow:hidden!important}
+.refTour>.tourLogoCircle{width:38px!important;height:38px!important;min-width:38px!important;border-radius:50%!important;background:transparent!important;overflow:hidden!important}
+.sidecard .sidecardWatermark{
+  display:block!important;
+  width:78px!important;
+  height:78px!important;
+  max-width:78px!important;
+  max-height:78px!important;
+  right:3px!important;
+  bottom:2px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  opacity:.11!important;
+  clip-path:none!important;
+}
