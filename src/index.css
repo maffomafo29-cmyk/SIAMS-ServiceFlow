@@ -705,3 +705,41 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .activityEvent{grid-template-columns:40px minmax(0,1fr)!important;gap:10px!important}
  .activityEvent time{grid-column:2;text-align:left!important}
 }
+
+/* Sidebar slogan: compact, fitted, no clipping */
+.sidecard{
+  min-height:92px!important;
+  height:92px!important;
+  margin:10px 10px 8px!important;
+  border-radius:12px!important;
+  overflow:hidden!important;
+}
+.sidecard:before{
+  content:'KEEPING'!important;
+  left:14px!important;
+  top:13px!important;
+  font-size:8px!important;
+  line-height:1!important;
+  letter-spacing:.16em!important;
+  font-weight:700!important;
+  color:#9aa6af!important;
+  white-space:nowrap!important;
+}
+.sidecard:after{
+  content:'ZAMBIA\A COOLER'!important;
+  left:14px!important;
+  right:10px!important;
+  bottom:12px!important;
+  font-size:18px!important;
+  line-height:.9!important;
+  letter-spacing:-.035em!important;
+  font-weight:900!important;
+  color:#fff!important;
+  white-space:pre!important;
+  overflow:visible!important;
+}
+@media(max-width:650px){
+ .sidecard{min-height:82px!important;height:82px!important}
+ .sidecard:before{left:12px!important;top:11px!important;font-size:7px!important}
+ .sidecard:after{left:12px!important;bottom:10px!important;font-size:16px!important}
+}
