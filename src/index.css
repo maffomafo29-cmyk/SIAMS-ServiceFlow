@@ -517,3 +517,15 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refAct b{font-size:7px!important}.refAct span,.refAct small{font-size:6px!important}
  .refQuick button{font-size:7px}
 }
+
+/* Balanced desktop readability: keep layout footprint, make content legible */
+@media (min-width:1001px){
+ .refKpi small{font-size:9px}.refKpi em{font-size:7.5px}
+ .refTitle h3,.refQuick h3{font-size:11px}.refTitle button{font-size:8px}
+ .refEnquiries table{font-size:9px}.refEnquiries th{font-size:7.5px}.refEnquiries td{padding-top:8px;padding-bottom:8px}.refStatus{font-size:7.5px}
+ .refLegend{font-size:8.5px;gap:5px}.refLegend b{font-size:8.5px}
+ .refTile>b{font-size:9px}.refTile p{font-size:7.5px}
+ .refTour b{font-size:12px!important}.refTour p{font-size:8px!important}.refTour button{font-size:8px!important}
+ .refAct b{font-size:9px!important}.refAct span,.refAct small{font-size:7.5px!important}
+ .refQuick button{font-size:8.5px}
+}
