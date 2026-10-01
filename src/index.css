@@ -618,3 +618,7 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refEnquiriesWide{overflow-x:auto}
  .refEnquiriesWide table{min-width:700px}
 }
+
+/* Latest enquiries is primary; summary/action cards follow underneath */
+.refEnquiriesWide{margin-bottom:12px}
+.refTopCards{margin-top:0;margin-bottom:0}
