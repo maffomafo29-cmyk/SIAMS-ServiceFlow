@@ -313,3 +313,61 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refTools>.refSearchWrap.open{position:absolute!important;right:0!important;top:0!important;width:min(300px,calc(100vw - 52px))!important;min-width:min(300px,calc(100vw - 52px))!important}
  .refWeather{display:none!important}
 }
+
+
+/* Pre-presentation desktop polish — 2026-10-01
+   Keep hero controls clear of messaging and modernise the sidebar signature. */
+@media (min-width:1001px){
+  .refHero{min-height:214px;height:214px}
+  .refHeroCopy{left:28px;top:48px;right:360px;max-width:640px;z-index:1}
+  .refHeroCopy h2{font-size:30px;line-height:1.04;margin-bottom:10px}
+  .refHeroCopy p{font-size:10.5px}
+  .heroEyebrow{margin-bottom:10px}
+  .heroTrust{margin-top:14px}
+  .refTools{top:14px;right:16px;z-index:5}
+  .refTools>.refSearchWrap{width:40px;height:34px;padding:0;justify-content:center;background:rgba(255,255,255,.96);box-shadow:0 8px 22px rgba(3,19,31,.16);transition:width .2s ease}
+  .refTools>.refSearchWrap.open{width:300px;padding:0 8px;justify-content:flex-start}
+  .refTools>.refSearchWrap>label{height:34px}
+  .refTools>button{width:34px;height:34px;box-shadow:0 8px 22px rgba(3,19,31,.16)}
+  .refTools>span{min-height:34px;padding:3px 7px 3px 3px;border-radius:20px;background:rgba(5,25,40,.62);backdrop-filter:blur(10px)}
+  .refTools>span>b{width:28px;height:28px}
+  .refWeather{right:16px;bottom:16px;z-index:2}
+}
+.sidecard{
+  position:relative;
+  min-height:132px;
+  margin:12px 10px 10px;
+  padding:0;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+  background:
+    radial-gradient(circle at 85% 18%,rgba(40,183,174,.28),transparent 35%),
+    linear-gradient(145deg,#0b2b43,#0a1f31 72%);
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
+}
+.sidecard:before{
+  content:'KEEPING';
+  position:absolute;
+  left:14px;
+  top:15px;
+  margin:0;
+  font-size:8px;
+  line-height:1;
+  letter-spacing:.22em;
+  font-weight:800;
+  color:#78ddd5;
+}
+.sidecard:after{
+  content:'ZAMBIA\\A COOLER';
+  white-space:pre;
+  position:absolute;
+  left:14px;
+  bottom:15px;
+  font-size:20px;
+  line-height:.9;
+  letter-spacing:-.045em;
+  font-weight:900;
+  color:#fff;
+}
+.sidecard>*{display:none!important}
