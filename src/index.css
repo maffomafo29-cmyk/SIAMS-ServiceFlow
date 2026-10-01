@@ -814,3 +814,11 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
 .refWeather>div>span{font-size:10px!important;font-weight:700!important;color:#fff!important;white-space:nowrap!important}
 .refWeather>div>small{grid-column:1/3;font-size:10px!important;color:rgba(255,255,255,.72)!important;margin-top:4px!important}
 @media(max-width:650px){.refWeatherIcon{width:29px!important;height:29px!important;flex-basis:29px!important}.refWeather>div>b{font-size:18px!important}.refWeather>div>span,.refWeather>div>small{font-size:9px!important}}
+
+/* Sidebar brand: meeting emblem + existing horizontal word treatment */
+.brand.officialBrand{height:74px!important;min-height:74px!important;padding:8px 10px!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:7px!important;overflow:hidden!important}
+.officialBrand .siamsRoundLogo{display:block!important;width:50px!important;height:50px!important;flex:0 0 50px!important;object-fit:cover!important;border-radius:50%!important}
+.officialBrand .siamsBrandWords{display:flex!important;flex-direction:column!important;justify-content:center!important;min-width:0!important;color:#fff!important;line-height:1!important}
+.officialBrand .siamsBrandWords b{font-size:18px!important;line-height:1!important;letter-spacing:.015em!important;white-space:nowrap!important}
+.officialBrand .siamsBrandWords span{font-size:5.5px!important;line-height:1.25!important;letter-spacing:.02em!important;white-space:nowrap!important;color:#d7e1e7!important;margin-top:3px!important}
+@media(max-width:1000px){.brand.officialBrand{padding:8px 7px!important;gap:6px!important}.officialBrand .siamsRoundLogo{width:46px!important;height:46px!important;flex-basis:46px!important}.officialBrand .siamsBrandWords b{font-size:16px!important}}
