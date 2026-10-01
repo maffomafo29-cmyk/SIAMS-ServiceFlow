@@ -455,3 +455,47 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .refTile>b{font-size:10px}.refTile p{font-size:8px}
  .refAct b{font-size:9.5px!important}.refAct span,.refAct small{font-size:8px!important}
 }
+
+/* Mobile Overview readability — intentionally sized for a real phone screen */
+@media(max-width:650px){
+ .refKpis{gap:10px;padding:12px 0}
+ .refKpi{height:auto;min-height:92px;padding:14px 13px;gap:11px}
+ .refKpi>span{width:36px;height:36px;flex:0 0 36px}
+ .refKpi svg{width:18px}
+ .refKpi b{font-size:28px!important;line-height:1}
+ .refKpi small{font-size:12px!important;line-height:1.3}
+ .refKpi em{font-size:10px!important;line-height:1.3;margin-top:5px}
+ .refTitle{min-height:52px;padding:14px 14px 10px}
+ .refTitle h3,.refQuick h3{font-size:16px!important;line-height:1.25}
+ .refTitle button{font-size:12px!important}
+ .refEnquiries{height:auto;overflow-x:auto}
+ .refEnquiries table{font-size:12px!important;min-width:560px}
+ .refEnquiries th{font-size:11px!important;padding:10px 9px}
+ .refEnquiries td{font-size:12px!important;padding:11px 9px}
+ .refStatus{font-size:11px!important;padding:5px 7px}
+ .refPipeline{min-height:310px;padding-bottom:16px}
+ .refDonut{width:138px;height:138px;margin:10px auto 14px}
+ .refDonut:after{width:76px;height:76px}
+ .refLegend{font-size:12px!important;gap:10px;padding:2px 18px}
+ .refLegend span{grid-template-columns:15px minmax(0,1fr) 24px;gap:7px}
+ .refLegend i{width:10px;height:10px}
+ .refLegend b{font-size:12px!important}
+ .refTiles{grid-template-columns:1fr 1fr;gap:10px}
+ .refTile{height:auto;min-height:160px}
+ .refTile>div{height:88px}
+ .refTile>b{font-size:13px!important;padding:9px 9px 0}
+ .refTile p{font-size:11px!important;line-height:1.4;margin:5px 24px 10px 9px}
+ .refTour{padding:16px;grid-template-columns:38px minmax(0,1fr);gap:12px}
+ .refTour>span{width:36px;height:36px}
+ .refTour b{font-size:17px!important}
+ .refTour p{font-size:12px!important;line-height:1.5!important;margin:8px 0 11px}
+ .refTour button{font-size:12px!important;min-height:34px!important;padding:8px 11px}
+ .refActivity{min-height:0}
+ .refAct{grid-template-columns:18px minmax(0,1fr) 50px;gap:9px;min-height:55px;padding:10px 13px}
+ .refAct>i{width:16px;height:16px}
+ .refAct b{font-size:13px!important;line-height:1.3!important}
+ .refAct span,.refAct small{font-size:11px!important;line-height:1.35!important}
+ .refQuick{padding:14px;min-height:0}
+ .refQuick h3{margin-bottom:10px}
+ .refQuick button{height:42px;font-size:12px!important;padding:0 12px;margin-bottom:7px}
+}
