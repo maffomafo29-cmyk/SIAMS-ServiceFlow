@@ -371,3 +371,26 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
   color:#fff;
 }
 .sidecard>*{display:none!important}
+
+
+/* Sidebar slogan fit correction — keep the modern card, make the copy clean and readable. */
+.sidecard:before{
+  left:16px;
+  top:18px;
+  font-size:7px;
+  line-height:1;
+  letter-spacing:.18em;
+  font-weight:700;
+}
+.sidecard:after{
+  content:'ZAMBIA\A COOLER';
+  left:16px;
+  right:16px;
+  bottom:18px;
+  font-size:16px;
+  line-height:1.02;
+  letter-spacing:-.02em;
+  font-weight:750;
+  white-space:pre-line;
+  overflow:visible;
+}
