@@ -743,3 +743,25 @@ button.refKpi:hover .refKpiArrow,button.refKpi:focus-visible .refKpiArrow{opacit
  .sidecard:before{left:12px!important;top:11px!important;font-size:7px!important}
  .sidecard:after{left:12px!important;bottom:10px!important;font-size:16px!important}
 }
+
+/* Settings: readable application typography */
+.settingsIntro h2{font-size:28px!important;line-height:1.15}
+.settingsIntro p:last-child{font-size:14px!important;line-height:1.45}
+.demoPill{font-size:12px!important}
+.settingHead h3{font-size:17px!important;line-height:1.25}
+.settingHead p{font-size:13px!important;line-height:1.45}
+.settingBody label:not(.checkRow){font-size:13px!important}
+.settingBody input:not([type=checkbox]),.settingBody select{font-size:14px!important;padding:11px 12px!important}
+.toggleRow{font-size:14px!important;line-height:1.35}
+.safeBox,.safeBox p,.safeBox span,.safeBox small,.checkRow{font-size:13px!important;line-height:1.45}
+@media(max-width:650px){
+ .settingsIntro{padding:18px!important;gap:12px;flex-wrap:wrap}
+ .settingsIntro h2{font-size:24px!important}
+ .settingsIntro p:last-child{font-size:13px!important}
+ .settingsGrid{grid-template-columns:1fr!important}
+ .settingCard{padding:17px!important}
+ .settingHead h3{font-size:16px!important}
+ .settingHead p{font-size:13px!important}
+ .settingBody label:not(.checkRow),.toggleRow{font-size:13px!important}
+ .settingBody input:not([type=checkbox]),.settingBody select{font-size:16px!important}
+}
