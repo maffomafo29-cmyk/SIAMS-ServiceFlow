@@ -962,3 +962,8 @@ html,body,#root,button,input,select,textarea,table,th,td,label{
  .customerProfile .profileStats span{font-size:12px!important}
  .customerProfile .profilePanelHead h3{font-size:16px!important}
 }
+
+/* Site-wide font lock: typography family only — no size, weight, spacing or layout changes */
+html,body,#root,#root *,#root *::before,#root *::after{
+  font-family:Arial,Helvetica,sans-serif!important;
+}
