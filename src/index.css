@@ -934,3 +934,31 @@ html,body,#root,button,input,select,textarea,table,th,td,label{
  .customerDetail small,.customerDetail span,.enquiryDetail small,.enquiryDetail span,.quoteDetail small,.quoteDetail span,.jobDetail small,.jobDetail span,.equipmentDetail small,.equipmentDetail span{font-size:12px!important}
  .customerDetail b,.enquiryDetail b,.quoteDetail b,.jobDetail b,.equipmentDetail b{font-size:14px!important}
 }
+
+/* CUSTOMER PROFILE — this is the full-screen customer record, not .customerDetail */
+.customerProfile,.customerProfile button{font-family:Arial,Helvetica,sans-serif!important}
+.customerProfile .backBtn{font-size:13px!important}
+.customerProfile .profileHero p{font-size:14px!important;line-height:1.45!important}
+.customerProfile .activeDot{font-size:12px!important;line-height:1.3!important}
+.customerProfile .profileActions button{font-size:13px!important}
+.customerProfile .profileStats span{font-size:13px!important;line-height:1.35!important}
+.customerProfile .profileStats b{font-size:19px!important}
+.customerProfile .profilePanelHead span{font-size:12px!important;line-height:1.3!important}
+.customerProfile .profilePanelHead h3{font-size:17px!important;line-height:1.25!important}
+.customerProfile .profilePanelHead button{font-size:13px!important;min-height:34px!important;height:auto!important}
+.customerProfile .equipmentCard b,
+.customerProfile .historyRow b,
+.customerProfile .serviceTimeline b{font-size:14px!important;line-height:1.35!important}
+.customerProfile .equipmentCard small,
+.customerProfile .historyRow small,
+.customerProfile .serviceTimeline span{font-size:12px!important;line-height:1.4!important}
+.customerProfile .historyRow>strong{font-size:14px!important}
+.customerProfile .badge{font-size:12px!important}
+.customerProfile .emptyState b{font-size:14px!important}
+.customerProfile .emptyState p{font-size:12px!important;line-height:1.45!important}
+.customerProfile .emptyState button{font-size:12px!important}
+@media(max-width:600px){
+ .customerProfile .profileHero h1{font-size:24px!important}
+ .customerProfile .profileStats span{font-size:12px!important}
+ .customerProfile .profilePanelHead h3{font-size:16px!important}
+}
