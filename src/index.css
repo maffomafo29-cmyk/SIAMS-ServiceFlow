@@ -1250,3 +1250,86 @@ button.brand.officialBrand{
     width:auto!important;max-width:none!important;
   }
 }
+
+
+/* PHONE HERO POLISH — fixes mobile only; approved desktop/tablet rules remain unchanged */
+@media (max-width:650px){
+  .refHero{
+    height:660px!important;
+    padding:76px 22px 92px!important;
+  }
+
+  /* Brand identifier belongs at the upper-left and hugs its contents. */
+  .heroEyebrow{
+    position:absolute!important;
+    top:18px!important;
+    left:18px!important;
+    margin:0!important;
+    width:auto!important;
+    max-width:calc(100% - 190px)!important;
+    min-height:36px!important;
+    padding:4px 9px 4px 5px!important;
+    gap:6px!important;
+    border-radius:19px!important;
+    font-size:9px!important;
+    line-height:1.15!important;
+    letter-spacing:.035em!important;
+    white-space:normal!important;
+    box-sizing:border-box!important;
+  }
+  .heroEyebrow>span{
+    width:27px!important;height:27px!important;flex:0 0 27px!important;
+  }
+
+  /* Compact utility controls: no oversized white bubbles. */
+  .refTools{
+    left:auto!important;
+    right:18px!important;
+    top:18px!important;
+    width:auto!important;
+    gap:6px!important;
+  }
+  .refSearchWrap{flex:0 0 36px!important;width:36px!important;min-width:36px!important}
+  .refSearchToggle,
+  .refActionWrap>button:not(.refAdminButton){
+    width:36px!important;height:36px!important;min-width:36px!important;
+    padding:9px!important;
+    border-radius:18px!important;
+  }
+  .refSearchToggle svg,
+  .refActionWrap>button:not(.refAdminButton) svg{width:18px!important;height:18px!important}
+
+  /* Account remains identifiable instead of becoming a floating logo. */
+  .refAdminButton{
+    width:36px!important;height:36px!important;min-width:36px!important;
+    padding:2px!important;border-radius:18px!important;
+    background:rgba(229,234,237,.94)!important;
+  }
+  .refTools .refAdminButton>.adminLogoCircle{
+    width:30px!important;height:30px!important;flex:0 0 30px!important;
+    padding:1px!important;
+  }
+  .refAdminButton i{display:none!important}
+
+  /* Copy starts below the top utility row. */
+  .refHeroCopy{
+    position:relative!important;
+    top:78px!important;
+  }
+
+  /* Expanded search/panels use the card width rather than overflowing the phone. */
+  .refSearchWrap.open{
+    position:fixed!important;
+    left:34px!important;right:34px!important;top:190px!important;
+    width:auto!important;max-width:none!important;
+  }
+  .refDropPanel,
+  .refActionWrap:nth-last-child(2) .refDropPanel{
+    position:absolute!important;
+    top:44px!important;
+    right:0!important;
+    left:auto!important;
+    width:min(310px,calc(100vw - 68px))!important;
+    max-width:calc(100vw - 68px)!important;
+  }
+}
