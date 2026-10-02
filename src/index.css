@@ -1333,3 +1333,76 @@ button.brand.officialBrand{
     max-width:calc(100vw - 68px)!important;
   }
 }
+
+
+/* PHONE HERO COMPACTION — requested 2026-10-03; mobile only */
+@media (max-width:650px){
+  /* Put the SIAMS identifier opposite the utilities, same compact size as approved. */
+  .heroEyebrow{
+    top:16px!important;
+    left:16px!important;
+    max-width:220px!important;
+    z-index:25!important;
+  }
+  .refTools{
+    top:16px!important;
+    right:16px!important;
+    left:auto!important;
+    gap:6px!important;
+    z-index:26!important;
+  }
+
+  /* Search and notification use exactly the same circle. */
+  .refSearchWrap{width:36px!important;min-width:36px!important;flex-basis:36px!important}
+  .refSearchToggle,
+  .refActionWrap>button:not(.refAdminButton){
+    width:36px!important;height:36px!important;min-width:36px!important;
+    padding:8px!important;border-radius:50%!important;
+    background:#fff!important;border:0!important;
+    box-shadow:none!important;
+  }
+
+  /* Administrator is the logo itself: remove the extra surrounding circle/pill. */
+  .refAdminButton{
+    width:36px!important;height:36px!important;min-width:36px!important;
+    padding:0!important;border:0!important;border-radius:0!important;
+    background:transparent!important;box-shadow:none!important;
+  }
+  .refTools .refAdminButton>.adminLogoCircle{
+    width:36px!important;height:36px!important;flex:0 0 36px!important;
+    padding:0!important;border:0!important;border-radius:0!important;
+    background:transparent!important;overflow:visible!important;
+  }
+  .refTools .refAdminButton>.adminLogoCircle img{
+    width:36px!important;height:36px!important;object-fit:contain!important;
+    border-radius:0!important;
+  }
+
+  /* Pull all hero content upward and remove unused lower image height. */
+  .refHero{
+    height:540px!important;
+    min-height:540px!important;
+    padding:64px 22px 68px!important;
+    background-position:center center!important;
+  }
+  .refHeroCopy{
+    top:54px!important;
+    margin:0!important;
+  }
+  .refHeroCopy h2{
+    margin-top:0!important;
+    margin-bottom:10px!important;
+    font-size:30px!important;
+    line-height:1.03!important;
+  }
+  .refHeroCopy p{
+    margin:0!important;
+    font-size:15px!important;
+    line-height:1.4!important;
+  }
+  .refWeather{
+    bottom:12px!important;
+    right:14px!important;
+    min-height:56px!important;
+  }
+}
