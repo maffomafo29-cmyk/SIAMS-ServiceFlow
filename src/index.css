@@ -1464,3 +1464,18 @@ button.brand.officialBrand{
 /* Staff login edit control — keep Make changes on the far right */
 .loginEditHead{display:flex!important;align-items:center!important;width:100%!important;gap:16px!important}
 .loginEditHead>button{margin-left:auto!important;flex:0 0 auto!important}
+
+
+/* Notification count badge — compact and anchored to the bell on every viewport */
+.refActionWrap>button{position:relative}
+.refNotifyCount{
+  position:absolute;top:-5px;right:-6px;z-index:4;
+  display:flex;align-items:center;justify-content:center;
+  min-width:18px;height:18px;padding:0 5px;
+  border-radius:999px;background:#d92d20;color:#fff;
+  border:2px solid #fff;font-size:10px;line-height:1;font-weight:700;
+  box-sizing:border-box;pointer-events:none;
+}
+@media (max-width:650px){
+  .refNotifyCount{top:-5px;right:-5px;min-width:17px;height:17px;padding:0 4px;font-size:9px}
+}
