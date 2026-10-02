@@ -1493,34 +1493,35 @@ button.brand.officialBrand{
 .refNotifyOpen{color:#344054!important}
 
 
-/* EXPANDED SEARCH — independent overlay; never changes hero/control geometry */
-.refSearchOverlay{
-  position:absolute;top:13px;right:16px;z-index:60;
-  width:min(430px,calc(100% - 32px));
+/* Search expands LEFT into the free hero space; notification/account stay fixed */
+.refTools{overflow:visible}
+.refSearchWrap{position:relative!important;transition:width .28s ease,flex-basis .28s ease!important}
+.refSearchWrap>label{
+  position:absolute;top:0;right:0;height:100%;
+  display:flex;align-items:center;gap:8px;box-sizing:border-box;
+  background:#fff;border-radius:999px;padding:0 12px;
+  opacity:0;transform:scaleX(.18);transform-origin:right center;
+  transition:transform .28s ease,opacity .16s ease;
+  overflow:hidden;
 }
-.refSearchOverlay>label{
-  width:100%;height:44px;box-sizing:border-box;
-  display:flex;align-items:center;gap:9px;
-  padding:0 14px;background:#fff;color:#667085;
-  border-radius:24px;box-shadow:0 8px 24px rgba(5,22,36,.16);
-}
-.refSearchOverlay>label>svg{width:17px;flex:0 0 17px}
-.refSearchOverlay input{
-  width:100%;min-width:0;border:0;outline:0;background:transparent;
-  font-size:14px;color:#273846;
-}
-.refSearchOverlay .refSearchClear{flex:0 0 auto}
-.refSearchOverlay .refSearchResults{position:absolute;top:50px;left:0;right:0;width:100%;box-sizing:border-box}
+.refSearchWrap.open>label{opacity:1;transform:scaleX(1)}
+.refSearchWrap.open>.refSearchToggle{opacity:0;pointer-events:none}
+.refSearchWrap.open input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#273846}
+.refSearchWrap.open .refSearchResults{position:absolute;top:48px;right:0;z-index:80}
 
-@media (min-width:651px) and (max-width:1000px){
-  .refSearchOverlay{top:16px;right:16px;width:min(390px,calc(100% - 32px))}
-}
 @media (max-width:650px){
-  .refSearchOverlay{
-    position:absolute!important;
-    top:16px!important;left:16px!important;right:16px!important;
-    width:auto!important;max-width:none!important;
-    margin:0!important;transform:none!important;
+  .refTools{left:auto!important;right:16px!important;width:auto!important;justify-content:flex-end!important}
+  .refSearchWrap{width:36px!important;min-width:36px!important;max-width:none!important;flex:0 0 36px!important}
+  .refSearchWrap.open{
+    position:relative!important;inset:auto!important;
+    width:min(300px,calc(100vw - 148px))!important;
+    min-width:180px!important;max-width:300px!important;
+    height:36px!important;min-height:36px!important;max-height:36px!important;
+    flex:0 1 min(300px,calc(100vw - 148px))!important;
+    z-index:40!important;
   }
-  .refSearchOverlay>label{height:44px!important}
+  .refSearchWrap.open>label{
+    width:100%!important;height:36px!important;left:auto!important;right:0!important;
+  }
+  .refSearchWrap.open .refSearchResults{width:100%!important;top:42px!important;left:auto!important;right:0!important}
 }
