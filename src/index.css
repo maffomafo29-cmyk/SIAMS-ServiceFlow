@@ -1610,3 +1610,31 @@ button.brand.officialBrand{
     z-index:9999!important;
   }
 }
+
+
+/* FINAL MOBILE HERO + SEARCH STATE — authoritative */
+@media (max-width:650px){
+  .refHero{
+    height:540px!important;min-height:540px!important;
+    padding:64px 22px 68px!important;overflow:hidden!important;
+  }
+  .refHeroCopy{
+    position:relative!important;inset:auto!important;
+    top:54px!important;left:auto!important;right:auto!important;
+    width:auto!important;max-width:100%!important;
+    margin:0!important;padding:0!important;transform:none!important;
+  }
+  .refSearchWrap.open{
+    position:fixed!important;
+    top:190px!important;left:22px!important;right:22px!important;
+    width:auto!important;min-width:0!important;max-width:none!important;
+    height:48px!important;min-height:48px!important;max-height:48px!important;
+    flex:0 0 auto!important;z-index:9999!important;
+  }
+  .refSearchWrap.open .refSearchToggle{display:none!important}
+  .refSearchWrap.open>label{
+    position:relative!important;inset:auto!important;
+    width:100%!important;height:48px!important;min-height:48px!important;
+    margin:0!important;box-sizing:border-box!important;
+  }
+}
