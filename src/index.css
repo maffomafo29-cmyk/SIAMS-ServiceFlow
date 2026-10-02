@@ -1492,36 +1492,44 @@ button.brand.officialBrand{
 .refDropHead small{color:#667085!important}
 .refNotifyOpen{color:#344054!important}
 
-
-/* Search expands LEFT into the free hero space; notification/account stay fixed */
-.refTools{overflow:visible}
-.refSearchWrap{position:relative!important;transition:width .28s ease,flex-basis .28s ease!important}
-.refSearchWrap>label{
-  position:absolute;top:0;right:0;height:100%;
-  display:flex;align-items:center;gap:8px;box-sizing:border-box;
-  background:#fff;border-radius:999px;padding:0 12px;
-  opacity:0;transform:scaleX(.18);transform-origin:right center;
-  transition:transform .28s ease,opacity .16s ease;
-  overflow:hidden;
-}
-.refSearchWrap.open>label{opacity:1;transform:scaleX(1)}
-.refSearchWrap.open>.refSearchToggle{opacity:0;pointer-events:none}
-.refSearchWrap.open input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#273846}
-.refSearchWrap.open .refSearchResults{position:absolute;top:48px;right:0;z-index:80}
-
+/* SEARCH: mobile opens left over free space without changing the utility-row width */
+.refTools{overflow:visible!important}
+.refSearchWrap{position:relative!important}
+.refSearchWrap>label{display:none}
 @media (max-width:650px){
-  .refTools{left:auto!important;right:16px!important;width:auto!important;justify-content:flex-end!important}
-  .refSearchWrap{width:36px!important;min-width:36px!important;max-width:none!important;flex:0 0 36px!important}
+  .refTools{
+    position:absolute!important;top:16px!important;right:16px!important;left:auto!important;
+    width:120px!important;max-width:120px!important;
+    display:flex!important;justify-content:flex-end!important;gap:6px!important;
+    overflow:visible!important;
+  }
+  .refSearchWrap{
+    position:relative!important;width:36px!important;min-width:36px!important;max-width:36px!important;
+    height:36px!important;flex:0 0 36px!important;
+  }
   .refSearchWrap.open{
     position:relative!important;inset:auto!important;
-    width:min(300px,calc(100vw - 148px))!important;
-    min-width:180px!important;max-width:300px!important;
-    height:36px!important;min-height:36px!important;max-height:36px!important;
-    flex:0 1 min(300px,calc(100vw - 148px))!important;
-    z-index:40!important;
+    width:36px!important;min-width:36px!important;max-width:36px!important;
+    height:36px!important;flex:0 0 36px!important;
   }
+  .refSearchWrap.open>.refSearchToggle{visibility:hidden!important}
   .refSearchWrap.open>label{
-    width:100%!important;height:36px!important;left:auto!important;right:0!important;
+    position:absolute!important;
+    display:flex!important;align-items:center!important;gap:8px!important;
+    top:0!important;right:0!important;left:auto!important;
+    width:min(300px,calc(100vw - 170px))!important;
+    min-width:210px!important;height:36px!important;
+    padding:0 12px!important;box-sizing:border-box!important;
+    background:#fff!important;border-radius:999px!important;
+    transform-origin:right center!important;
+    animation:sfSearchOpen .22s ease-out both!important;
+    z-index:50!important;
   }
-  .refSearchWrap.open .refSearchResults{width:100%!important;top:42px!important;left:auto!important;right:0!important}
+  .refSearchWrap.open>label>svg{width:16px!important;flex:0 0 16px!important}
+  .refSearchWrap.open input{width:100%!important;min-width:0!important;border:0!important;outline:0!important;background:transparent!important;font-size:13px!important}
+  .refSearchWrap.open .refSearchResults{
+    position:absolute!important;top:42px!important;right:0!important;left:auto!important;
+    width:min(300px,calc(100vw - 170px))!important;z-index:51!important;
+  }
 }
+@keyframes sfSearchOpen{from{opacity:0;transform:scaleX(.15)}to{opacity:1;transform:scaleX(1)}}
