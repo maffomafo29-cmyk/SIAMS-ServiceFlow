@@ -981,3 +981,71 @@ button.brand.officialBrand{
   cursor:pointer!important;
   outline:0;
 }
+
+
+/* MOBILE-ONLY repair — desktop remains untouched */
+@media (max-width:650px){
+  /* Overview hero: reserve clean zones for controls, copy and weather */
+  .refHero{
+    min-height:440px!important;
+    height:auto!important;
+    padding:92px 18px 118px!important;
+    overflow:visible!important;
+  }
+  .refHeroCopy{position:relative!important;z-index:1!important;max-width:100%!important}
+  .refHeroCopy h2{font-size:32px!important;line-height:1.02!important;letter-spacing:-.035em!important;margin:14px 0 14px!important}
+  .refHeroCopy h2 em{display:inline!important}
+  .refHeroCopy p{font-size:15px!important;line-height:1.45!important;max-width:100%!important;margin:0!important}
+  .refHeroCopy p br{display:none!important}
+
+  /* Search stays a floating control; opening it must not reflow/cover the hero */
+  .refTools{position:absolute!important;left:16px!important;right:16px!important;top:14px!important;z-index:20!important;display:flex!important;justify-content:flex-end!important;align-items:flex-start!important}
+  .refSearchWrap{position:relative!important;flex:0 0 40px!important;width:40px!important;min-width:40px!important}
+  .refSearchWrap.open{position:absolute!important;left:0!important;right:0!important;top:0!important;width:auto!important;height:48px!important;z-index:30!important}
+  .refSearchWrap.open>.refSearchToggle{display:none!important}
+  .refSearchWrap.open>label{position:absolute!important;inset:0!important;width:100%!important;height:48px!important;margin:0!important;border-radius:24px!important;box-sizing:border-box!important}
+  .refSearchResults{position:absolute!important;left:0!important;right:0!important;top:54px!important;max-height:260px!important;overflow:auto!important;z-index:31!important}
+
+  /* Dropdowns float above the hero and remain compact */
+  .refActionWrap{position:relative!important}
+  .refDropPanel{position:absolute!important;top:48px!important;right:0!important;width:min(310px,calc(100vw - 44px))!important;max-width:calc(100vw - 44px)!important;z-index:40!important}
+  .refActionWrap:nth-last-child(2) .refDropPanel{right:-46px!important}
+
+  /* Weather owns the lower-right zone; copy ends above it */
+  .refWeather{right:14px!important;bottom:14px!important;z-index:3!important;max-width:175px!important}
+}
+
+/* MOBILE-ONLY readability for operational modules.
+   Overview and Settings are intentionally excluded. */
+@media (max-width:650px){
+  .page:not(.settingsPage) h1,
+  .page:not(.settingsPage) .pageTitle h1,
+  .page:not(.settingsPage) .pageHead h1{font-size:26px!important;line-height:1.18!important}
+
+  .page:not(.settingsPage) h2{font-size:20px!important;line-height:1.25!important}
+  .page:not(.settingsPage) h3,
+  .page:not(.settingsPage) .cardTitle h3{font-size:17px!important;line-height:1.3!important}
+
+  .page:not(.settingsPage) p,
+  .page:not(.settingsPage) td,
+  .page:not(.settingsPage) th,
+  .page:not(.settingsPage) label{font-size:14px!important;line-height:1.45!important}
+
+  .page:not(.settingsPage) small{font-size:12px!important;line-height:1.4!important}
+  .page:not(.settingsPage) button,
+  .page:not(.settingsPage) input,
+  .page:not(.settingsPage) select,
+  .page:not(.settingsPage) textarea{font-size:14px!important}
+
+  .page:not(.settingsPage) .badge,
+  .page:not(.settingsPage) .status,
+  .page:not(.settingsPage) [class*="Badge"],
+  .page:not(.settingsPage) [class*="Status"]{font-size:12px!important}
+
+  /* Full-screen records use readable mobile sizes */
+  .customerProfile .profileHero p,
+  .customerDetail p,.enquiryDetail p,.quoteDetail p,.jobDetail p,.equipmentDetail p{font-size:14px!important}
+  .customerDetail small,.customerDetail span,.enquiryDetail small,.enquiryDetail span,
+  .quoteDetail small,.quoteDetail span,.jobDetail small,.jobDetail span,
+  .equipmentDetail small,.equipmentDetail span{font-size:12px!important}
+}
