@@ -1580,3 +1580,17 @@ button.brand.officialBrand{
     padding:22px 10px 8px!important;
   }
 }
+
+
+/* Search focus state: freeze and visually separate the dashboard beneath */
+.globalSearchScreen::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:rgba(5,8,12,.38);
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+  pointer-events:auto;
+}
+.globalSearchScreen{isolation:isolate}
