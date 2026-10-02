@@ -1086,3 +1086,59 @@ button.brand.officialBrand{
   .page table{min-width:620px!important}
   .page [class*="table"],.page [class*="Table"]{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
 }
+
+
+/* 2026-10 mobile/tablet QA pass. Scoped below desktop so the approved PC view is untouched. */
+@media (max-width:1000px){
+  /* Operational screens use the same readable scale established on Overview. */
+  .dataModule h2,.reportsWorkspace h2,.activityWorkspace h2,.maintenanceWorkspace h2{font-size:24px!important;line-height:1.2!important}
+  .dataModule h3,.reportsWorkspace h3,.activityWorkspace h3,.maintenanceWorkspace h3{font-size:17px!important;line-height:1.3!important}
+  .dataModule p,.reportsWorkspace p,.activityWorkspace p,.maintenanceWorkspace p,
+  .dataModule td,.dataModule th{font-size:14px!important;line-height:1.45!important}
+  .dataModule small,.reportsWorkspace small,.activityWorkspace small,.maintenanceWorkspace small{font-size:12px!important;line-height:1.4!important}
+  .dataModule button,.dataModule input,.dataModule select,.dataModule textarea,
+  .reportsWorkspace button,.activityWorkspace button,.maintenanceWorkspace button{font-size:14px!important}
+  .reportsHero p,.maintenanceBanner p,.activityHero p{font-size:14px!important;line-height:1.45!important}
+
+  /* Detail screens: preserve layout, raise only text/control readability. */
+  .customerProfile,.enquiryDetail,.quoteDetail,.jobDetail,.equipmentDetail{font-size:14px!important}
+  .customerProfile p,.enquiryDetail p,.quoteDetail p,.jobDetail p,.equipmentDetail p{font-size:14px!important;line-height:1.45!important}
+  .customerProfile small,.enquiryDetail small,.quoteDetail small,.jobDetail small,.equipmentDetail small{font-size:12px!important;line-height:1.4!important}
+  .customerProfile button,.enquiryDetail button,.quoteDetail button,.jobDetail button,.equipmentDetail button,
+  .customerProfile input,.enquiryDetail input,.quoteDetail input,.jobDetail input,.equipmentDetail input,
+  .customerProfile select,.enquiryDetail select,.quoteDetail select,.jobDetail select,.equipmentDetail select{font-size:14px!important}
+}
+
+@media (max-width:650px){
+  /* Hero audit: the eyebrow was the clipped static component in the screenshot. */
+  .refHero{min-height:600px!important;padding:94px 18px 112px!important;overflow:hidden!important}
+  .refHeroCopy{position:relative!important;left:auto!important;right:auto!important;top:auto!important;max-width:100%!important}
+  .heroEyebrow{
+    display:flex!important;align-items:center!important;width:fit-content!important;max-width:100%!important;
+    padding:7px 10px!important;margin:0 0 34px!important;border-radius:22px!important;
+    font-size:11px!important;line-height:1.25!important;letter-spacing:.07em!important;
+    white-space:normal!important;overflow:visible!important;
+  }
+  .heroEyebrow>span{flex:0 0 24px!important;width:24px!important;height:24px!important}
+  .heroEyebrow svg{width:14px!important;height:14px!important}
+  .refHeroCopy h2{font-size:32px!important;line-height:1.04!important;margin:0 0 16px!important}
+  .refHeroCopy p{font-size:15px!important;line-height:1.5!important;margin:0!important;padding-bottom:86px!important}
+
+  /* Three hero actions remain one compact row. Search expands only inside that row. */
+  .refTools{left:18px!important;right:18px!important;top:18px!important;width:auto!important;max-width:none!important;gap:8px!important}
+  .refSearchWrap{flex:0 0 44px!important;width:44px!important;min-width:44px!important}
+  .refSearchToggle,.refActionWrap>button{width:44px!important;height:44px!important;min-width:44px!important;border-radius:50%!important}
+  .refAdminButton i{display:none!important}
+  .refTools .refAdminButton>.adminLogoCircle{width:44px!important;height:44px!important;flex:0 0 44px!important}
+  .refSearchWrap.open{left:0!important;right:0!important;top:0!important;width:100%!important;height:48px!important}
+  .refDropPanel,.refActionWrap:nth-last-child(2) .refDropPanel{top:54px!important;left:0!important;right:0!important}
+
+  /* Weather has its own bottom zone and cannot overlap copy/actions. */
+  .refWeather{right:16px!important;bottom:16px!important;max-width:190px!important;min-height:64px!important}
+
+  /* Mobile data modules scroll internally instead of clipping the page. */
+  .dataModule{max-width:100%!important;overflow:hidden!important}
+  .dataModule>div:has(table){max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+  .dataModule table{min-width:680px!important}
+  .inlineSelect{min-height:42px!important;font-size:14px!important}
+}
