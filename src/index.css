@@ -1142,3 +1142,41 @@ button.brand.officialBrand{
   .dataModule table{min-width:680px!important}
   .inlineSelect{min-height:42px!important;font-size:14px!important}
 }
+
+
+/* FINAL RESPONSIVE QA — scoped to tablet/mobile only; approved desktop stays unchanged */
+@media (max-width:1000px){
+  .dataModule,.reportsWorkspace,.activityWorkspace,.maintenanceWorkspace,.customerProfile,.enquiryDetail,.quoteDetail,.jobDetail,.equipmentDetail{max-width:100%;min-width:0;box-sizing:border-box}
+  .dataModule td,.dataModule th,.dataModule p,.dataModule button,.dataModule input,.dataModule select,
+  .reportsWorkspace p,.reportsWorkspace button,.activityWorkspace p,.activityWorkspace button,
+  .maintenanceWorkspace p,.maintenanceWorkspace button{font-size:14px!important;line-height:1.45!important}
+  .dataModule small,.reportsWorkspace small,.activityWorkspace small,.maintenanceWorkspace small{font-size:12px!important;line-height:1.4!important}
+  .customerProfile,.enquiryDetail,.quoteDetail,.jobDetail,.equipmentDetail{font-size:14px!important}
+  .customerProfile button,.customerProfile input,.customerProfile select,
+  .enquiryDetail button,.enquiryDetail input,.enquiryDetail select,
+  .quoteDetail button,.quoteDetail input,.quoteDetail select,
+  .jobDetail button,.jobDetail input,.jobDetail select,
+  .equipmentDetail button,.equipmentDetail input,.equipmentDetail select{font-size:14px!important}
+}
+@media (max-width:650px){
+  .refHero{min-height:600px!important;height:auto!important;padding:94px 18px 112px!important;overflow:hidden!important}
+  .refHeroCopy{position:relative!important;inset:auto!important;max-width:100%!important;min-width:0!important}
+  .heroEyebrow{display:flex!important;align-items:center!important;width:max-content!important;max-width:100%!important;box-sizing:border-box!important;padding:7px 10px!important;margin:0 0 34px!important;border-radius:22px!important;font-size:11px!important;line-height:1.25!important;letter-spacing:.055em!important;white-space:normal!important;overflow:visible!important}
+  .heroEyebrow>span{flex:0 0 24px!important;width:24px!important;height:24px!important}
+  .refHeroCopy h2{font-size:32px!important;line-height:1.04!important;letter-spacing:-.035em!important;margin:0 0 16px!important;overflow-wrap:normal!important;word-break:normal!important}
+  .refHeroCopy p{font-size:15px!important;line-height:1.5!important;margin:0!important;padding:0 0 86px!important;max-width:100%!important}
+  .refHeroCopy p br{display:none!important}
+  .refTools{position:absolute!important;left:18px!important;right:18px!important;top:18px!important;width:auto!important;max-width:none!important;display:flex!important;justify-content:flex-end!important;gap:8px!important;z-index:20!important}
+  .refSearchWrap{position:relative!important;flex:0 0 44px!important;width:44px!important;min-width:44px!important}
+  .refSearchToggle,.refActionWrap>button{width:44px!important;height:44px!important;min-width:44px!important;border-radius:50%!important}
+  .refActionWrap{position:static!important}
+  .refSearchWrap.open{position:absolute!important;left:0!important;right:0!important;top:0!important;width:100%!important;height:48px!important;z-index:30!important}
+  .refDropPanel,.refActionWrap:nth-last-child(2) .refDropPanel{position:absolute!important;top:54px!important;left:0!important;right:0!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;transform:none!important;z-index:40!important}
+  .refWeather{right:16px!important;bottom:16px!important;max-width:190px!important;min-height:64px!important;z-index:3!important}
+  .dataModule{max-width:100%!important;overflow:hidden!important}
+  .dataModule>div:has(table),.tablewrap{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+  .dataModule table,.tablewrap table{min-width:620px!important}
+  .inlineSelect{min-height:42px!important;font-size:14px!important}
+  .workflowStrip,.quoteProgress,.processVisual{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+  .workflowStrip>div,.quoteProgress>div,.processVisual>div{flex-shrink:0!important}
+}
