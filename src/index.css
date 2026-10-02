@@ -1180,3 +1180,73 @@ button.brand.officialBrand{
   .workflowStrip,.quoteProgress,.processVisual{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
   .workflowStrip>div,.quoteProgress>div,.processVisual>div{flex-shrink:0!important}
 }
+
+
+/* MOBILE HERO FINAL — scoped only to phones; desktop/tablet desktop styling untouched */
+@media (max-width:650px){
+  /* Keep the three controls compact and restore the administrator identity. */
+  .refTools{
+    left:16px!important;right:16px!important;top:16px!important;
+    align-items:center!important;gap:8px!important;
+  }
+  .refSearchWrap{flex:0 0 44px!important;width:44px!important;min-width:44px!important}
+  .refSearchToggle,.refActionWrap>button:not(.refAdminButton){
+    width:44px!important;height:44px!important;min-width:44px!important;
+  }
+  .refAdminButton{
+    width:auto!important;height:44px!important;min-width:0!important;
+    padding:4px 10px 4px 5px!important;border-radius:24px!important;
+    display:flex!important;align-items:center!important;gap:7px!important;
+    background:rgba(229,234,237,.94)!important;color:#183042!important;
+  }
+  .refAdminButton i{
+    display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+    font-style:normal!important;font-size:10px!important;line-height:1.08!important;
+    white-space:nowrap!important;color:#183042!important;
+  }
+  .refAdminButton i small{font-size:8px!important;line-height:1.15!important;color:#667782!important}
+  .refTools .refAdminButton>.adminLogoCircle{
+    width:34px!important;height:34px!important;flex:0 0 34px!important;
+    background:#dce3e7!important;border:1px solid rgba(24,48,66,.12)!important;
+    padding:2px!important;box-sizing:border-box!important;
+  }
+  .refTools .refAdminButton>.adminLogoCircle img{
+    width:100%!important;height:100%!important;object-fit:contain!important;
+    border-radius:50%!important;
+  }
+
+  /* The static SIAMS eyebrow should hug its content, not become an oversized banner. */
+  .heroEyebrow{
+    width:fit-content!important;max-width:calc(100% - 8px)!important;
+    min-height:0!important;height:auto!important;
+    padding:6px 11px 6px 7px!important;margin:0 0 26px!important;
+    gap:7px!important;border-radius:20px!important;
+    font-size:10px!important;line-height:1.2!important;letter-spacing:.045em!important;
+  }
+  .heroEyebrow>span{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;
+    display:grid!important;place-items:center!important;
+  }
+  .heroEyebrow svg{width:15px!important;height:15px!important}
+
+  /* Rebalance the hero vertically so weather is visible and nothing floats off-card. */
+  .refHero{
+    min-height:0!important;height:660px!important;
+    padding:82px 28px 92px!important;box-sizing:border-box!important;
+  }
+  .refHeroCopy{width:100%!important;max-width:100%!important}
+  .refHeroCopy h2{font-size:31px!important;line-height:1.05!important;margin-bottom:14px!important}
+  .refHeroCopy p{font-size:15px!important;line-height:1.45!important;padding:0!important;max-width:100%!important}
+  .refWeather{
+    right:16px!important;bottom:16px!important;
+    width:auto!important;max-width:176px!important;min-height:60px!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Panels/search stay inside the hero width. */
+  .refSearchWrap.open{left:0!important;right:0!important;width:100%!important}
+  .refDropPanel,.refActionWrap:nth-last-child(2) .refDropPanel{
+    left:0!important;right:0!important;top:52px!important;
+    width:auto!important;max-width:none!important;
+  }
+}
