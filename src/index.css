@@ -1492,44 +1492,62 @@ button.brand.officialBrand{
 .refDropHead small{color:#667085!important}
 .refNotifyOpen{color:#344054!important}
 
-/* SEARCH: mobile opens left over free space without changing the utility-row width */
-.refTools{overflow:visible!important}
-.refSearchWrap{position:relative!important}
-.refSearchWrap>label{display:none}
-@media (max-width:650px){
-  .refTools{
-    position:absolute!important;top:16px!important;right:16px!important;left:auto!important;
-    width:120px!important;max-width:120px!important;
-    display:flex!important;justify-content:flex-end!important;gap:6px!important;
-    overflow:visible!important;
-  }
-  .refSearchWrap{
-    position:relative!important;width:36px!important;min-width:36px!important;max-width:36px!important;
-    height:36px!important;flex:0 0 36px!important;
-  }
-  .refSearchWrap.open{
-    position:relative!important;inset:auto!important;
-    width:36px!important;min-width:36px!important;max-width:36px!important;
-    height:36px!important;flex:0 0 36px!important;
-  }
-  .refSearchWrap.open>.refSearchToggle{visibility:hidden!important}
-  .refSearchWrap.open>label{
-    position:absolute!important;
-    display:flex!important;align-items:center!important;gap:8px!important;
-    top:0!important;right:0!important;left:auto!important;
-    width:min(300px,calc(100vw - 170px))!important;
-    min-width:210px!important;height:36px!important;
-    padding:0 12px!important;box-sizing:border-box!important;
-    background:#fff!important;border-radius:999px!important;
-    transform-origin:right center!important;
-    animation:sfSearchOpen .22s ease-out both!important;
-    z-index:50!important;
-  }
-  .refSearchWrap.open>label>svg{width:16px!important;flex:0 0 16px!important}
-  .refSearchWrap.open input{width:100%!important;min-width:0!important;border:0!important;outline:0!important;background:transparent!important;font-size:13px!important}
-  .refSearchWrap.open .refSearchResults{
-    position:absolute!important;top:42px!important;right:0!important;left:auto!important;
-    width:min(300px,calc(100vw - 170px))!important;z-index:51!important;
-  }
+
+/* Full-screen ServiceFlow search — independent from dashboard layout */
+.globalSearchScreen{
+  position:fixed;inset:0;z-index:10000;
+  background:#05080c;color:#fff;
+  padding:clamp(18px,4vw,42px);
+  box-sizing:border-box;overflow-y:auto;
 }
-@keyframes sfSearchOpen{from{opacity:0;transform:scaleX(.15)}to{opacity:1;transform:scaleX(1)}}
+.globalSearchTop{
+  width:min(820px,100%);margin:0 auto;
+  display:grid;grid-template-columns:minmax(0,1fr) 48px;
+  gap:12px;align-items:center;
+}
+.globalSearchTop label{
+  height:52px;background:#fff;border-radius:16px;
+  display:flex;align-items:center;gap:10px;padding:0 16px;
+  box-sizing:border-box;color:#667085;
+}
+.globalSearchTop label>svg{width:20px;flex:0 0 20px}
+.globalSearchTop input{
+  width:100%;min-width:0;border:0;outline:0;background:transparent;
+  color:#17212b;font-size:16px;
+}
+.globalSearchClose{
+  width:48px;height:48px;border:1px solid #344054;border-radius:50%;
+  background:#111820;color:#fff;display:grid;place-items:center;cursor:pointer;
+}
+.globalSearchClose svg{width:22px}
+.globalSearchBody{width:min(820px,100%);margin:22px auto 0}
+.globalSearchSuggestions{display:grid;gap:8px}
+.globalSearchSuggestions>button{
+  width:100%;min-height:68px;border:1px solid #252f3b;border-radius:14px;
+  background:#10161d;color:#fff;padding:12px 14px;
+  display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
+  text-align:left;cursor:pointer;
+}
+.globalSearchSuggestions>button>span{
+  font-size:10px;text-transform:uppercase;letter-spacing:.06em;
+  color:#98a2b3;background:#1d2939;padding:5px 7px;border-radius:6px;
+}
+.globalSearchSuggestions b{display:block;font-size:15px}
+.globalSearchSuggestions small{display:block;margin-top:4px;color:#98a2b3;font-size:12px}
+.globalSearchSuggestions svg{width:18px;color:#98a2b3}
+.globalSearchHint,.globalSearchEmpty{
+  min-height:280px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;color:#98a2b3;
+}
+.globalSearchHint>svg,.globalSearchEmpty>svg{width:34px;height:34px;margin-bottom:14px}
+.globalSearchHint b,.globalSearchEmpty b{font-size:18px;color:#fff;margin-bottom:6px}
+.globalSearchHint small,.globalSearchEmpty small{font-size:13px;max-width:360px;line-height:1.5}
+@media(max-width:650px){
+  .globalSearchScreen{padding:18px 16px}
+  .globalSearchTop{grid-template-columns:minmax(0,1fr) 42px;gap:9px}
+  .globalSearchTop label{height:48px;border-radius:14px;padding:0 13px}
+  .globalSearchTop input{font-size:14px}
+  .globalSearchClose{width:42px;height:42px}
+  .globalSearchBody{margin-top:16px}
+  .globalSearchSuggestions>button{min-height:64px;padding:11px 12px}
+}
