@@ -1406,3 +1406,57 @@ button.brand.officialBrand{
     min-height:56px!important;
   }
 }
+
+
+/* MOBILE HERO TOP-RIGHT CONTROL SIZE LOCK */
+@media (max-width:650px){
+  .refTools{gap:6px!important}
+  .refSearchWrap,
+  .refSearchToggle,
+  .refActionWrap,
+  .refActionWrap>button,
+  .refAdminButton{
+    width:36px!important;
+    height:36px!important;
+    min-width:36px!important;
+    max-width:36px!important;
+    min-height:36px!important;
+    max-height:36px!important;
+    flex:0 0 36px!important;
+    box-sizing:border-box!important;
+  }
+  .refSearchToggle,
+  .refActionWrap>button:not(.refAdminButton){
+    padding:8px!important;
+    border-radius:50%!important;
+  }
+  .refAdminButton{
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    border-radius:50%!important;
+    overflow:hidden!important;
+  }
+  .refTools .refAdminButton>.adminLogoCircle{
+    width:36px!important;
+    height:36px!important;
+    min-width:36px!important;
+    max-width:36px!important;
+    flex:0 0 36px!important;
+    padding:0!important;
+    margin:0!important;
+    border:0!important;
+    background:transparent!important;
+    border-radius:50%!important;
+    overflow:hidden!important;
+  }
+  .refTools .refAdminButton>.adminLogoCircle img{
+    display:block!important;
+    width:36px!important;
+    height:36px!important;
+    margin:0!important;
+    padding:0!important;
+    object-fit:contain!important;
+    border-radius:50%!important;
+  }
+}
