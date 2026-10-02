@@ -1460,3 +1460,7 @@ button.brand.officialBrand{
     border-radius:50%!important;
   }
 }
+
+/* Staff login edit control — keep Make changes on the far right */
+.loginEditHead{display:flex!important;align-items:center!important;width:100%!important;gap:16px!important}
+.loginEditHead>button{margin-left:auto!important;flex:0 0 auto!important}
