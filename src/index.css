@@ -1542,3 +1542,37 @@ button.brand.officialBrand{
   }
   .refSearchWrap.open input{min-width:0!important;width:100%!important}
 }
+
+
+/* MOBILE SEARCH: fixed overlay, never participates in hero flex layout */
+@media (max-width:650px){
+  .refSearchWrap.open{
+    position:fixed!important;
+    top:190px!important;
+    left:22px!important;
+    right:22px!important;
+    width:auto!important;
+    max-width:none!important;
+    min-width:0!important;
+    height:48px!important;
+    min-height:48px!important;
+    max-height:48px!important;
+    flex:none!important;
+    z-index:9999!important;
+  }
+  .refSearchWrap.open>label{
+    position:relative!important;
+    inset:auto!important;
+    display:flex!important;
+    width:100%!important;
+    height:48px!important;
+    min-height:48px!important;
+    box-sizing:border-box!important;
+    margin:0!important;
+  }
+  .refSearchWrap.open input{
+    width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+}
