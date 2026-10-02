@@ -1491,3 +1491,54 @@ button.brand.officialBrand{
 .refDropHead b{color:#17212b!important}
 .refDropHead small{color:#667085!important}
 .refNotifyOpen{color:#344054!important}
+
+
+/* FINAL HERO SEARCH GEOMETRY LOCK
+   Expanded search overlays the hero; it must never reflow or push approved hero content. */
+.refHero{overflow:hidden}
+.refTools{isolation:isolate}
+.refSearchWrap.open{
+  position:absolute!important;
+  z-index:40!important;
+  margin:0!important;
+}
+.refSearchWrap.open>label{
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+}
+@media (min-width:1001px){
+  .refSearchWrap.open{
+    top:0!important;right:0!important;left:auto!important;
+    width:min(430px,42vw)!important;min-width:0!important;max-width:430px!important;
+  }
+}
+@media (min-width:651px) and (max-width:1000px){
+  .refSearchWrap.open{
+    top:0!important;right:0!important;left:auto!important;
+    width:min(390px,calc(100vw - 96px))!important;
+    min-width:0!important;max-width:calc(100vw - 96px)!important;
+  }
+}
+@media (max-width:650px){
+  .refHero{overflow:hidden!important}
+  .refHeroCopy{
+    left:0!important;right:auto!important;
+    width:100%!important;max-width:100%!important;
+    transform:none!important;
+    box-sizing:border-box!important;
+  }
+  .refSearchWrap.open{
+    position:absolute!important;
+    top:0!important;right:0!important;left:auto!important;
+    width:min(330px,calc(100vw - 76px))!important;
+    min-width:0!important;max-width:calc(100vw - 76px)!important;
+    height:44px!important;min-height:44px!important;max-height:44px!important;
+    flex-basis:auto!important;
+  }
+  .refSearchWrap.open label{
+    position:absolute!important;top:0!important;right:0!important;left:auto!important;
+    height:44px!important;min-height:44px!important;
+  }
+  .refSearchWrap.open input{min-width:0!important;width:100%!important}
+}
