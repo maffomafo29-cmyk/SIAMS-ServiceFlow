@@ -1479,3 +1479,15 @@ button.brand.officialBrand{
 @media (max-width:650px){
   .refNotifyCount{top:-5px;right:-5px;min-width:17px;height:17px;padding:0 4px;font-size:9px}
 }
+
+
+/* Notification panel contrast — keep all copy readable on the white surface */
+.refDropPanel .refNotifyItem{background:#fff!important;color:#17212b!important}
+.refDropPanel .refNotifyItem b{color:#17212b!important}
+.refDropPanel .refNotifyItem small{color:#667085!important}
+.refDropPanel .refNotifyItem em{color:#475467!important}
+.refDropPanel .refNotifyItem>span{color:#344054!important;background:#f2f4f7!important}
+.refDropPanel .refNotifyItem>svg{color:#475467!important}
+.refDropHead b{color:#17212b!important}
+.refDropHead small{color:#667085!important}
+.refNotifyOpen{color:#344054!important}
