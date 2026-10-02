@@ -1551,3 +1551,32 @@ button.brand.officialBrand{
   .globalSearchBody{margin-top:16px}
   .globalSearchSuggestions>button{min-height:64px;padding:11px 12px}
 }
+
+
+/* Compact search panel: height follows its content instead of filling the viewport */
+.globalSearchScreen{
+  inset:0 0 auto 0!important;
+  bottom:auto!important;
+  min-height:0!important;
+  height:auto!important;
+  max-height:calc(100dvh - 16px)!important;
+  overflow-y:auto!important;
+  border-radius:0 0 18px 18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.28);
+}
+.globalSearchHint,.globalSearchEmpty{
+  min-height:0!important;
+  padding:26px 12px 12px!important;
+}
+.globalSearchBody:has(.globalSearchSuggestions){
+  padding-bottom:4px;
+}
+@media(max-width:650px){
+  .globalSearchScreen{
+    max-height:calc(100dvh - 12px)!important;
+    border-radius:0 0 16px 16px;
+  }
+  .globalSearchHint,.globalSearchEmpty{
+    padding:22px 10px 8px!important;
+  }
+}
