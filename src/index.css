@@ -1624,3 +1624,14 @@ button.brand.officialBrand{
 .equipmentHistoryEmpty{display:flex;gap:12px;align-items:center;padding:16px;border:1px dashed #d0d5dd;border-radius:10px;color:#667085}
 .equipmentHistoryEmpty svg{width:20px}.equipmentHistoryEmpty b{display:block;color:#344054;font-size:13px}.equipmentHistoryEmpty small{display:block;margin-top:3px}
 @media(max-width:650px){.equipmentHistoryRow{grid-template-columns:34px minmax(0,1fr)}.equipmentHistoryRow>div:last-child{grid-column:2;text-align:left}}
+
+
+/* Structured job completion — isolated field-service form */
+.completionForm{display:grid;gap:10px;width:100%;padding:12px;border:1px solid #dfe5ea;border-radius:10px;background:#f8fafb}
+.completionForm label{display:grid;gap:5px;font-size:12px;font-weight:700;color:#344054}
+.completionForm input,.completionForm textarea{width:100%;box-sizing:border-box;border:1px solid #d0d5dd;border-radius:8px;background:#fff;padding:9px 10px;color:#17212b;font:inherit}
+.completionForm textarea{min-height:72px;resize:vertical}
+.completionForm .completionCheck{display:flex;align-items:center;gap:8px;font-weight:600}.completionForm .completionCheck input{width:16px;height:16px}
+.completionActions{display:flex;justify-content:flex-end;gap:8px}
+.jobComplete small{display:block;margin-top:5px;color:#667085;line-height:1.4}
+@media(max-width:650px){.completionActions{flex-direction:column-reverse}.completionActions button{width:100%}}
