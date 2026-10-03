@@ -1594,3 +1594,16 @@ button.brand.officialBrand{
   pointer-events:auto;
 }
 .globalSearchScreen{isolation:isolate}
+
+
+/* Quotation calculator — scoped to New Record modal only */
+.quoteBuilder{grid-column:1/-1;border:1px solid #dfe5ea;border-radius:12px;background:#f8fafb;padding:14px;min-width:0}
+.quoteBuilderHead{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px}
+.quoteBuilderHead b{display:block;font-size:15px;color:#17212b}.quoteBuilderHead small{display:block;margin-top:3px;font-size:12px;color:#667085}.quoteBuilderHead button{flex:0 0 auto}
+.quoteItemLabels,.quoteItemRow{display:grid;grid-template-columns:minmax(180px,1fr) 72px 130px 110px 34px;gap:8px;align-items:center}
+.quoteItemLabels{padding:0 2px 6px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#667085}.quoteItemRow{margin-bottom:8px}
+.quoteItemRow input,.quoteLabour input{width:100%;min-width:0;height:40px;box-sizing:border-box;border:1px solid #d0d5dd;border-radius:8px;background:#fff;padding:0 10px;font-size:13px;color:#17212b}
+.quoteItemRow strong{font-size:13px;color:#17212b;text-align:right;white-space:nowrap}.quoteRemove{width:32px;height:32px;border:0;border-radius:7px;background:#eef1f4;color:#667085;display:grid;place-items:center}.quoteRemove:disabled{opacity:.35}.quoteRemove svg{width:15px}
+.quoteLabour{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(260px,1fr);gap:18px;align-items:end;margin-top:12px;padding-top:12px;border-top:1px solid #e4e7ec}.quoteLabour label{margin:0}
+.quoteLabour>div{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;font-size:12px;color:#667085}.quoteLabour>div b{color:#344054;text-align:right}.quoteLabour>div strong{padding-top:7px;border-top:1px solid #d0d5dd;font-size:15px;color:#17212b}.quoteLabour>div strong:last-child{text-align:right}
+@media(max-width:760px){.quoteBuilder{padding:12px}.quoteBuilderHead{align-items:flex-start;flex-direction:column}.quoteItemLabels{display:none}.quoteItemRow{grid-template-columns:minmax(0,1fr) 62px 100px 32px}.quoteItemRow input:first-child{grid-column:1/-1}.quoteItemRow strong{grid-column:1/4;text-align:right;padding-right:4px}.quoteRemove{grid-column:4;grid-row:2}.quoteLabour{grid-template-columns:1fr}}
