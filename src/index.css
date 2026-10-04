@@ -1937,3 +1937,63 @@ tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
   pointer-events:auto!important;
  }
 }
+
+
+/* Dedicated notification modal layer: independent of hero/mobile utility CSS */
+.notificationModalLayer{
+ position:fixed;inset:0;z-index:20000;
+ display:flex;align-items:flex-start;justify-content:flex-end;
+ padding:88px 28px 24px;
+ pointer-events:none;
+}
+.notificationModalLayer>.notificationBackdrop{
+ position:absolute!important;inset:0!important;
+ width:100%!important;height:100%!important;
+ margin:0!important;padding:0!important;border:0!important;border-radius:0!important;
+ background:rgba(5,8,12,.42)!important;
+ backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+ pointer-events:auto!important;z-index:0!important;
+}
+.notificationModalLayer>.notificationFocusPanel{
+ position:relative!important;z-index:1!important;
+ width:min(430px,calc(100vw - 32px))!important;
+ max-height:calc(100dvh - 112px)!important;
+ min-height:0!important;
+ background:#fff!important;color:#17212b!important;
+ border:1px solid #e4e7ec!important;border-radius:16px!important;
+ box-shadow:0 24px 70px rgba(5,8,12,.28)!important;
+ display:flex!important;flex-direction:column!important;
+ overflow:hidden!important;
+ pointer-events:auto!important;
+}
+.notificationModalLayer .refDropHead{
+ flex:0 0 auto!important;padding:18px 18px 14px!important;
+ border-bottom:1px solid #eaecf0!important;
+}
+.notificationModalLayer .refNotifyList{
+ flex:1 1 auto!important;min-height:0!important;
+ overflow-y:auto!important;overflow-x:hidden!important;
+ overscroll-behavior:contain!important;-webkit-overflow-scrolling:touch!important;
+ touch-action:pan-y!important;
+ padding-bottom:24px!important;
+}
+.notificationModalLayer .refNotifyItem,
+.notificationModalLayer .refNotifyMain,
+.notificationModalLayer .refMarkAll,
+.notificationModalLayer .refMarkRead{pointer-events:auto!important}
+@media(max-width:650px){
+ .notificationModalLayer{
+  padding:calc(env(safe-area-inset-top,0px) + 74px) 16px calc(env(safe-area-inset-bottom,0px) + 16px)!important;
+  align-items:stretch!important;justify-content:stretch!important;
+ }
+ .notificationModalLayer>.notificationFocusPanel{
+  width:100%!important;
+  max-height:none!important;
+  height:100%!important;
+  border-radius:16px!important;
+ }
+ .notificationModalLayer .refNotifyList{
+  padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))!important;
+  scroll-padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))!important;
+ }
+}
