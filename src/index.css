@@ -1747,3 +1747,64 @@ tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
  .notificationFocusPanel .refNotifyMain small{font-size:12px!important}
  .modal label,.modal input,.modal select,.modal textarea{font-size:14px!important}
 }
+
+
+/* UI geometry pass — keep overlays, icons and logos centered in their intended surfaces */
+.refActionWrap>.notificationBackdrop{
+ position:fixed!important;inset:0!important;z-index:9997!important;
+ width:100vw!important;height:100dvh!important;min-width:0!important;max-width:none!important;
+ min-height:0!important;max-height:none!important;
+ padding:0!important;margin:0!important;border:0!important;border-radius:0!important;
+ background:rgba(5,8,12,.34)!important;
+ backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+ box-shadow:none!important;display:block!important;
+}
+.refActionWrap .notificationFocusPanel{
+ position:absolute!important;z-index:9999!important;
+ display:flex!important;flex-direction:column!important;
+ overflow:hidden!important;
+ max-height:min(70dvh,620px)!important;
+}
+.notificationFocusPanel>.refDropHead{flex:0 0 auto!important}
+.notificationFocusPanel>.refNotifyList{
+ flex:1 1 auto!important;min-height:0!important;
+ overflow-y:auto!important;overflow-x:hidden!important;
+ overscroll-behavior:contain!important;
+ -webkit-overflow-scrolling:touch!important;
+ touch-action:pan-y!important;
+ scrollbar-gutter:stable;
+}
+.notificationFocusPanel>.refDropPlaceholder{
+ overflow-y:auto!important;overscroll-behavior:contain!important;
+}
+@media(max-width:650px){
+ .refActionWrap .notificationFocusPanel{max-height:calc(100dvh - 88px)!important}
+}
+
+/* Every icon-only control centers its glyph instead of inheriting asymmetric padding */
+.close,.globalSearchClose,.refSearchToggle,
+.refActionWrap>button:not(.refAdminButton):not(.notificationBackdrop),
+.icon{
+ display:inline-grid!important;place-items:center!important;
+ line-height:1!important;
+}
+.close{
+ width:34px!important;height:34px!important;min-width:34px!important;min-height:34px!important;
+ padding:0!important;
+}
+.close svg,.globalSearchClose svg,.refSearchToggle svg,
+.refActionWrap>button:not(.refAdminButton):not(.notificationBackdrop)>svg{
+ display:block!important;margin:auto!important;flex:0 0 auto!important;
+}
+
+/* Logos/images always sit in the optical centre of their allocated logo surface */
+.adminLogoCircle,.customerAvatar,.mark,.moduleIcon,.guidedIcon,.quickIcon,.reportHead>span,.reportKpi>span{
+ display:grid!important;place-items:center!important;
+}
+.adminLogoCircle img,.customerAvatar img{
+ display:block!important;
+ width:100%!important;height:100%!important;
+ object-fit:contain!important;
+ object-position:center center!important;
+ margin:auto!important;
+}
