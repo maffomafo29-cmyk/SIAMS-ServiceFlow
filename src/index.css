@@ -1664,3 +1664,13 @@ button.brand.officialBrand{
 .refMarkRead{display:block;margin:-5px 10px 8px auto;padding:3px 0}
 .refNotifyMain em{font-style:normal}
 @media(max-width:650px){.refNotifyHead{align-items:flex-start}.refNotifyMain{padding:10px 8px}.refMarkRead{margin-right:8px}}
+
+
+/* Ranked search results — preserve focused search layout while allowing every match to be viewed */
+.globalSearchBody{min-height:0!important}
+.globalSearchSuggestions{max-height:calc(100dvh - 110px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.searchMatch{background:transparent;color:#fff;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:2px}
+.globalSearchSuggestions small .searchMatch{color:#d0d5dd}
+@media(max-width:650px){
+ .globalSearchSuggestions{max-height:calc(100dvh - 92px);-webkit-overflow-scrolling:touch}
+}
