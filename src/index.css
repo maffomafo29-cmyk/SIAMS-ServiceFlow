@@ -1650,3 +1650,17 @@ button.brand.officialBrand{
  .shell>aside>.settings{display:none!important}
  .brand.officialBrand{display:flex!important;padding-right:62px!important}
 }
+
+
+/* Notification read state — scoped to the existing notification panel */
+.refNotifyHead{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.refNotifyHead>span{display:grid;gap:2px}
+.refMarkAll,.refMarkRead{border:0;background:transparent;color:#2f4c9b;font-size:10px;font-weight:700;cursor:pointer}
+.refNotifyItem{display:block!important;padding:0!important}
+.refNotifyMain{width:100%;border:0;background:transparent;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:9px;align-items:start;text-align:left;padding:10px;cursor:pointer;color:inherit}
+.refNotifyItem.isUnread{background:#f7f9ff}
+.refNotifyItem.isRead{opacity:.68;background:#fff}
+.refNotifyItem.isUnread .refNotifyMain>div>b:after{content:'';display:inline-block;width:6px;height:6px;margin-left:6px;border-radius:50%;background:#2f4c9b;vertical-align:middle}
+.refMarkRead{display:block;margin:-5px 10px 8px auto;padding:3px 0}
+.refNotifyMain em{font-style:normal}
+@media(max-width:650px){.refNotifyHead{align-items:flex-start}.refNotifyMain{padding:10px 8px}.refMarkRead{margin-right:8px}}
