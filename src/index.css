@@ -1635,3 +1635,18 @@ button.brand.officialBrand{
 .completionActions{display:flex;justify-content:flex-end;gap:8px}
 .jobComplete small{display:block;margin-top:5px;color:#667085;line-height:1.4}
 @media(max-width:650px){.completionActions{flex-direction:column-reverse}.completionActions button{width:100%}}
+
+
+/* Mobile settings placement — isolated navigation adjustment */
+.mobileSettingsTop{display:none}
+@media(max-width:650px){
+ .shell>aside{position:relative!important}
+ .mobileSettingsTop{
+  display:grid!important;position:absolute;top:10px;right:12px;z-index:3;
+  width:42px;height:42px;padding:0;border:0;border-radius:50%;
+  place-items:center;background:transparent;color:#fff;cursor:pointer
+ }
+ .mobileSettingsTop svg{width:22px;height:22px}
+ .shell>aside>.settings{display:none!important}
+ .brand.officialBrand{display:flex!important;padding-right:62px!important}
+}
