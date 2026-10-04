@@ -2214,3 +2214,27 @@ tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
  }
  .mobileGlobalTools svg{pointer-events:none!important}
 }
+
+
+/* Global bell trigger only — do not alter notification panel */
+@media(max-width:650px){
+ .shell>aside>.mobileGlobalTools{
+  z-index:2147483000!important;
+  pointer-events:auto!important;
+ }
+ .shell>aside>.mobileGlobalTools>.mobileNotifyTop{
+  position:relative!important;
+  z-index:2147483001!important;
+  display:grid!important;
+  place-items:center!important;
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:transparent;
+ }
+ .shell>aside>.mobileGlobalTools>.mobileNotifyTop::before{
+  content:'';position:absolute;inset:-3px;border-radius:50%;pointer-events:none;
+ }
+}
