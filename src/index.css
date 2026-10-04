@@ -1904,3 +1904,36 @@ tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
   padding-bottom:32px!important;
  }
 }
+
+
+/* Notification interaction layer fix — backdrop blocks app, panel remains fully active */
+.notificationBackdrop{
+ pointer-events:auto!important;
+}
+.refActionWrap .notificationFocusPanel{
+ pointer-events:auto!important;
+ isolation:isolate!important;
+}
+.notificationFocusPanel,
+.notificationFocusPanel *{
+ pointer-events:auto!important;
+}
+.notificationFocusPanel>.refNotifyList{
+ position:relative!important;
+ z-index:1!important;
+ overflow-y:auto!important;
+ touch-action:pan-y!important;
+}
+.notificationFocusPanel .refNotifyMain,
+.notificationFocusPanel .refMarkAll,
+.notificationFocusPanel .refMarkRead{
+ cursor:pointer!important;
+ touch-action:manipulation!important;
+}
+@media(max-width:650px){
+ .refTools .notificationBackdrop{z-index:9997!important}
+ .refTools .refActionWrap>.notificationFocusPanel{
+  z-index:10001!important;
+  pointer-events:auto!important;
+ }
+}
