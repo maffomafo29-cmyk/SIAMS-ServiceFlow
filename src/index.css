@@ -1997,3 +1997,40 @@ tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
   scroll-padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))!important;
  }
 }
+
+
+/* Android touch-scroll fix: one explicit scroll viewport inside notification modal */
+.notificationModalLayer>.notificationFocusPanel{
+ min-height:0!important;
+}
+.notificationModalLayer .refNotifyList{
+ display:block!important;
+ min-height:0!important;
+ overflow-y:auto!important;
+ overflow-x:hidden!important;
+ -webkit-overflow-scrolling:touch!important;
+ overscroll-behavior-y:contain!important;
+ touch-action:pan-y!important;
+}
+@media(max-width:650px){
+ .notificationModalLayer{
+  height:100dvh!important;
+  max-height:100dvh!important;
+  box-sizing:border-box!important;
+ }
+ .notificationModalLayer>.notificationFocusPanel{
+  height:auto!important;
+  max-height:calc(100dvh - 106px - env(safe-area-inset-bottom,0px))!important;
+  min-height:0!important;
+  align-self:stretch!important;
+ }
+ .notificationModalLayer .refNotifyList{
+  flex:1 1 0!important;
+  height:0!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow-y:scroll!important;
+  touch-action:pan-y!important;
+  padding-bottom:48px!important;
+ }
+}
