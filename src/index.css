@@ -1674,3 +1674,11 @@ button.brand.officialBrand{
 @media(max-width:650px){
  .globalSearchSuggestions{max-height:calc(100dvh - 92px);-webkit-overflow-scrolling:touch}
 }
+
+
+/* Notification destination cue — temporary, scoped highlight only */
+.notificationFocus{position:relative;z-index:1;animation:notificationFocusPulse .62s ease-in-out 5!important;scroll-margin-block:110px}
+tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
+@keyframes notificationFocusPulse{0%,100%{box-shadow:0 0 0 0 rgba(47,76,155,0)}50%{box-shadow:0 0 0 4px rgba(47,76,155,.32)}}
+@keyframes notificationFocusCell{0%,100%{background:inherit}50%{background:#eaf0ff}}
+@media(prefers-reduced-motion:reduce){.notificationFocus,tr.notificationFocus>td{animation:none!important;outline:3px solid rgba(47,76,155,.4)}}
