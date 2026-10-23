@@ -2604,3 +2604,24 @@ button.allNotificationRow:hover{background:#f5f8ff!important}
  .allNotificationsHeader>button{width:40px!important;height:40px!important;min-height:40px!important;border-radius:11px!important}
 }
 @media(prefers-reduced-motion:reduce){.globalNoticeItem,.globalNoticeHeadActions button,.allNotificationsHeader>button{transition:none!important}}
+
+
+/* Notification destination feedback: scroll to the exact record and pulse twice */
+.notificationFocus{
+  position:relative!important;
+  z-index:2;
+  border-radius:14px!important;
+  outline:2px solid #5686f5!important;
+  outline-offset:3px!important;
+  animation:sfNotificationPulseTwice 1.15s ease-in-out 2!important;
+  scroll-margin-block:28px;
+}
+@keyframes sfNotificationPulseTwice{
+  0%,100%{box-shadow:0 0 0 0 rgba(71,118,208,0);filter:none}
+  18%{box-shadow:0 0 0 7px rgba(71,118,208,.22);filter:saturate(1.12)}
+  38%{box-shadow:0 0 0 2px rgba(71,118,208,.08);filter:none}
+  58%{box-shadow:0 0 0 8px rgba(71,118,208,.2);filter:saturate(1.1)}
+  78%{box-shadow:0 0 0 2px rgba(71,118,208,.06);filter:none}
+}
+.notificationFocus:focus{outline:2px solid #5686f5!important}
+@media(prefers-reduced-motion:reduce){.notificationFocus{animation:none!important;box-shadow:0 0 0 4px rgba(71,118,208,.18)!important}}
