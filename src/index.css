@@ -2263,3 +2263,211 @@ tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
  .globalNoticeList{flex:1;min-height:0;max-height:none;padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));overscroll-behavior-y:contain}
 }
 @media(prefers-reduced-motion:reduce){.globalNoticeItem{transition:none}}
+
+
+/* =========================================================
+   SIAMS ServiceFlow — universal design-quality pass
+   Based on CSS.pdf: preserve the approved ServiceFlow identity
+   while fixing readability, alignment, responsive behavior,
+   interaction feedback and contained scrolling consistently.
+   ========================================================= */
+:root{
+  --sf-text:#172033;
+  --sf-muted:#667085;
+  --sf-border:#e4e7ec;
+  --sf-surface:#ffffff;
+  --sf-surface-soft:#f8fafc;
+  --sf-focus:#4776d0;
+  --sf-radius-control:9px;
+  --sf-radius-card:14px;
+  --sf-shadow-panel:0 16px 44px rgba(16,24,40,.16);
+  --sf-space-1:4px;
+  --sf-space-2:8px;
+  --sf-space-3:12px;
+  --sf-space-4:16px;
+  --sf-space-5:20px;
+  --sf-space-6:24px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{max-width:100%;overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{max-width:100%;min-width:320px;overflow-x:clip;color:var(--sf-text);text-rendering:optimizeLegibility}
+#root{min-height:100%;max-width:100%;overflow-x:clip}
+button,input,select,textarea{font:inherit}
+button{max-width:100%;text-align:center;vertical-align:middle;-webkit-tap-highlight-color:transparent}
+button:not(:disabled){cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.58}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid color-mix(in srgb,var(--sf-focus) 72%,transparent);
+  outline-offset:2px;
+}
+input,select,textarea{max-width:100%;min-width:0}
+img,svg,video,canvas{max-width:100%}
+svg{flex-shrink:0}
+p,td,th,label,small,strong,span{overflow-wrap:anywhere}
+h1,h2,h3,h4{line-height:1.25;text-wrap:pretty}
+p{line-height:1.5}
+:where(.shell,main,section,article,aside,header,footer,form,fieldset,.panel,.card,.modal,.modalContent,.modalBody,.content,.pageContent){min-width:0}
+:where(.shell,main,.content,.pageContent){max-width:100%}
+
+/* Keep the established narrow dark sidebar and approved dashboard identity. */
+.shell>aside{flex-shrink:0}
+.shell>aside button{min-height:38px}
+.shell>aside button svg{width:18px;height:18px;flex-shrink:0}
+.shell>aside button span{min-width:0;line-height:1.25}
+.shell>aside button,.shell>aside a{align-items:center}
+
+/* Typography: preserve hierarchy without tiny labels or oversized layouts. */
+:where(.modal,.modalContent,.modalBody,.globalNoticePanel,.globalNoticeHistory,.notificationModal,.notificationPanel,.dialog,.drawer) :where(label,small,.muted,.hint,.helper,.formHint,.fieldHint){
+  font-size:max(13px, .88em);
+  line-height:1.45;
+}
+:where(.modal,.modalContent,.modalBody,.globalNoticePanel,.notificationModal,.notificationPanel,.dialog,.drawer) :where(p,li,td,th,input,select,textarea,button){
+  line-height:1.45;
+}
+:where(.badge,.statusBadge,.pill){max-width:100%;white-space:normal;line-height:1.35}
+:where(.muted,.subtle,.secondaryText){color:var(--sf-muted)}
+
+/* Consistent controls and genuinely centered labels, including icon buttons. */
+:where(button,.button,.btn,[role="button"],input[type="submit"],input[type="button"]){
+  min-height:38px;
+}
+:where(button,.button,.btn,[role="button"]):not(.icon):not(.iconButton):not(.navItem):not(.sidebarItem){
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+:where(button,.button,.btn,[role="button"]) :where(svg,.icon){margin-inline:0;flex-shrink:0}
+:where(.icon,.iconButton,.closeButton,.modalClose,.notificationBell,.mobileNotifyTop){
+  display:inline-grid;
+  place-items:center;
+  flex-shrink:0;
+}
+:where(.icon,.iconButton,.closeButton,.modalClose,.notificationBell) svg{display:block;margin:0}
+:where(.closeButton,.modalClose,[aria-label*="Close"],[title="Close"]){line-height:1}
+:where(.closeButton,.modalClose,[aria-label*="Close"],[title="Close"]) svg{width:18px;height:18px}
+:where(button,.button,.btn,[role="button"]){transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+@media(hover:hover){
+  :where(button,.button,.btn,[role="button"]):not(:disabled):hover{filter:brightness(.985)}
+}
+:where(button,.button,.btn,[role="button"]):not(:disabled):active{transform:translateY(1px)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+/* Forms: readable labels, consistent control heights and safe narrow layouts. */
+:where(form,.form,.formGrid,.modalForm) label{min-width:0;line-height:1.4}
+:where(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),select,textarea){
+  min-height:42px;
+  border-radius:var(--sf-radius-control);
+}
+textarea{min-height:96px;resize:vertical}
+:where(input,select,textarea)::placeholder{opacity:.78}
+:where(.formGrid,.form-row,.formRow,.fieldGrid){min-width:0}
+:where(.formGrid,.form-row,.formRow,.fieldGrid)>*{min-width:0;max-width:100%}
+:where(input[type="checkbox"],input[type="radio"]){width:18px;height:18px;flex:0 0 auto;accent-color:#3156a6}
+:where(.formActions,.modalActions,.dialogActions,.buttonRow,.actionRow){
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:10px;
+}
+:where(.formActions,.modalActions,.dialogActions,.buttonRow,.actionRow)>button{max-width:100%}
+
+/* Cards and dashboard panels: balanced density, clear hierarchy, no giant gaps. */
+:where(.card,.kpiCard,.statCard,.dashboardCard,.panel,.sectionCard){
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+:where(.card,.kpiCard,.statCard,.dashboardCard,.panel,.sectionCard) :where(h2,h3,h4){margin-top:0}
+:where(.card,.kpiCard,.statCard,.dashboardCard,.panel,.sectionCard) :where(button,a){max-width:100%}
+:where(.kpiGrid,.statsGrid,.dashboardGrid,.cardGrid,.overviewGrid){min-width:0}
+:where(.kpiGrid,.statsGrid,.dashboardGrid,.cardGrid,.overviewGrid)>*{min-width:0}
+:where(.card,.kpiCard,.statCard,.dashboardCard) :where(.value,.metricValue,.kpiValue){font-variant-numeric:tabular-nums}
+
+/* Tables: legible rows, predictable columns, and scrolling contained to the table. */
+:where(.tableWrap,.tableContainer,.table-scroll,.dataTableWrap,.responsiveTable){
+  width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+}
+table{max-width:100%;border-collapse:separate;border-spacing:0}
+:where(table th,table td){vertical-align:middle;line-height:1.45}
+:where(table th){font-weight:650}
+:where(table td,table th){overflow-wrap:anywhere}
+:where(table td button,table th button){white-space:normal}
+:where(table td input,table td select){min-width:0;max-width:100%}
+
+/* Dialogs and drawers: viewport-bounded, independently scrollable, no background drift. */
+:where(.modalOverlay,.modalBackdrop,.dialogBackdrop,.drawerBackdrop,.notificationModalLayer){
+  overscroll-behavior:contain;
+}
+:where(.modal,.modalContent,.modalBody,.notificationModal,.notificationPanel,.dialog,.drawer,.globalNoticePanel){
+  min-width:0;max-width:calc(100vw - 24px);overscroll-behavior:contain;
+}
+:where(.modal,.modalContent,.notificationModal,.notificationPanel,.dialog,.drawer){
+  max-height:calc(100dvh - 32px);
+}
+:where(.modalBody,.modalContent,.notificationModal,.notificationPanel,.dialog,.drawer){
+  overflow-y:auto;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;
+}
+:where(.modalHeader,.modalFooter,.modalActions,.dialogActions){flex-shrink:0}
+:where(.modalHeader,.modalTitleRow){display:flex;align-items:center;justify-content:space-between;gap:12px}
+:where(.modalHeader,.modalTitleRow)>:first-child{min-width:0}
+:where(.modalHeader,.modalTitleRow)>button{flex:0 0 auto}
+body:has(.globalNoticeLayer),body:has(.modalOverlay),body:has(.modalBackdrop),body:has(.dialogBackdrop),body:has(.notificationModalLayer){overscroll-behavior:none}
+
+/* Notification panel: readable on all screens, internal scrolling only. */
+.globalNoticePanel{display:flex;flex-direction:column;min-height:0;box-shadow:var(--sf-shadow-panel)}
+.globalNoticeHead{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0}
+.globalNoticeHead>*{min-width:0}
+.globalNoticeList{min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.globalNoticeItem{min-width:0;overflow-wrap:anywhere}
+.globalNoticeItem button{min-width:0}
+.globalNoticeItem :where(b,strong,small,p,span){overflow-wrap:anywhere}
+.globalNoticeHistory{min-width:0}
+.globalNoticeHistoryItem{min-width:0}
+.globalNoticeHistoryItem>*{min-width:0}
+.globalNoticeLayer{overscroll-behavior:contain;touch-action:auto}
+.globalNoticePanel{touch-action:pan-y}
+.globalNoticeList{touch-action:pan-y}
+
+/* Search, dropdowns and popovers stay inside their available viewport. */
+:where(.searchBox,.searchWrap,.searchBar,.filterBar,.toolbar,.pageToolbar){min-width:0;max-width:100%}
+:where(.searchBox,.searchWrap,.searchBar) input{width:100%;min-width:0}
+:where(.dropdownMenu,.selectMenu,.popover,.contextMenu){max-width:calc(100vw - 20px);max-height:70dvh;overflow:auto;overscroll-behavior:contain}
+:where(.toolbar,.pageToolbar,.filterBar){display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+:where(.toolbar,.pageToolbar,.filterBar)>*{min-width:0;max-width:100%}
+
+/* Tablet and mobile: reflow instead of shrinking the desktop layout into a mess. */
+@media(max-width:900px){
+  :where(.kpiGrid,.statsGrid,.dashboardGrid,.cardGrid,.overviewGrid){grid-template-columns:repeat(2,minmax(0,1fr))}
+  :where(.pageToolbar,.toolbar,.filterBar){gap:8px}
+  :where(.modal,.modalContent,.notificationModal,.notificationPanel,.dialog,.drawer){max-height:calc(100dvh - 24px)}
+}
+@media(max-width:650px){
+  html,body,#root,.shell{width:100%;max-width:100%;overflow-x:clip}
+  :where(main,.main,.mainContent,.pageContent,.contentArea,.dashboardContent){min-width:0;max-width:100%}
+  :where(.kpiGrid,.statsGrid,.dashboardGrid,.cardGrid,.overviewGrid){grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  :where(.card,.kpiCard,.statCard,.dashboardCard,.panel,.sectionCard){border-radius:12px}
+  :where(.pageHeader,.pageTitleRow,.sectionHeader,.cardHeader){gap:10px;flex-wrap:wrap}
+  :where(.pageHeader,.pageTitleRow,.sectionHeader,.cardHeader)>*{min-width:0}
+  :where(.toolbar,.pageToolbar,.filterBar,.formActions,.modalActions,.dialogActions,.buttonRow,.actionRow){gap:8px}
+  :where(.toolbar,.pageToolbar,.filterBar)>button,:where(.formActions,.modalActions,.dialogActions,.buttonRow,.actionRow)>button{flex:0 1 auto}
+  :where(.modalOverlay,.modalBackdrop,.dialogBackdrop,.drawerBackdrop){padding:12px!important;align-items:center}
+  :where(.modal,.modalContent,.notificationModal,.notificationPanel,.dialog,.drawer){
+    width:min(100%,560px);max-width:100%;max-height:calc(100dvh - 24px);margin:auto;
+  }
+  :where(.modalBody,.modalContent,.notificationModal,.notificationPanel,.dialog,.drawer){overscroll-behavior:contain}
+  :where(.formGrid,.form-row,.formRow,.fieldGrid){grid-template-columns:minmax(0,1fr)}
+  :where(.tableWrap,.tableContainer,.table-scroll,.dataTableWrap,.responsiveTable){max-width:100%}
+  :where(table){min-width:600px}
+  .globalNoticePanel{left:12px;right:12px;top:calc(env(safe-area-inset-top,0px) + 64px);bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:auto;max-width:none;max-height:none}
+  .globalNoticeList{flex:1;min-height:0;overflow-y:auto}
+}
+@media(max-width:380px){
+  :where(.kpiGrid,.statsGrid,.dashboardGrid,.cardGrid,.overviewGrid){grid-template-columns:minmax(0,1fr)}
+  :where(button,.button,.btn,[role="button"]){max-width:100%}
+}
+
+/* Print remains a clean document rather than printing app navigation. */
+@media print{
+  html,body,#root{max-width:none!important;overflow:visible!important}
+  :where(button,.no-print,.shell>aside,.globalNoticeLayer,.toast,.notificationBell){display:none!important}
+  :where(table){min-width:0!important;width:100%!important}
+}
