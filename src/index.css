@@ -2238,3 +2238,28 @@ tr.notificationFocus>td{animation:notificationFocusCell .62s ease-in-out 5}
   content:'';position:absolute;inset:-3px;border-radius:50%;pointer-events:none;
  }
 }
+
+
+/* Notification panel stabilization and read-state styling */
+.globalNoticeLayer{position:fixed;inset:0;z-index:30000;overscroll-behavior:contain}
+.globalNoticePanel{overscroll-behavior:contain;isolation:isolate;contain:layout paint;touch-action:pan-y}
+.globalNoticeList{overscroll-behavior:contain;touch-action:pan-y;scrollbar-gutter:stable}
+.globalNoticeItem{position:relative;transition:background-color .16s ease,opacity .16s ease}
+.globalNoticeItem.isUnread{background:#f7f9ff}
+.globalNoticeItem.isUnread:after{content:"";position:absolute;left:7px;top:22px;width:6px;height:6px;border-radius:50%;background:#3156a6}
+.globalNoticeItem.isUnread b{font-weight:750}
+.globalNoticeItem.isRead{background:#fff}
+.globalNoticeItem.isRead>div{opacity:.82}
+.globalNoticeHistory{padding:14px 18px 8px;border-top:1px solid #eaecf0;background:#f8fafc}
+.globalNoticeHistory> b{display:block;margin:2px 0 8px;font-size:13px;color:#475467}
+.globalNoticeHistoryItem{display:grid;grid-template-columns:75px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid #eaecf0;color:#667085}
+.globalNoticeHistoryItem>div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.globalNoticeHistoryItem b{font-size:13px;color:#344054}
+.globalNoticeHistoryItem small,.globalNoticeHistoryItem em{font-size:12px;line-height:1.4;overflow-wrap:anywhere}
+.globalNoticeHistoryItem em{font-style:normal;color:#15803d}
+@media(max-width:650px){
+ .globalNoticePanel{top:calc(env(safe-area-inset-top,0px) + 72px);right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);left:16px;width:auto;max-height:none;border-radius:14px}
+ .globalNoticeHead{flex-shrink:0}
+ .globalNoticeList{flex:1;min-height:0;max-height:none;padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));overscroll-behavior-y:contain}
+}
+@media(prefers-reduced-motion:reduce){.globalNoticeItem{transition:none}}
