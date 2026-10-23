@@ -2471,3 +2471,56 @@ body:has(.globalNoticeLayer),body:has(.modalOverlay),body:has(.modalBackdrop),bo
   :where(button,.no-print,.shell>aside,.globalNoticeLayer,.toast,.notificationBell){display:none!important}
   :where(table){min-width:0!important;width:100%!important}
 }
+
+
+/* Notification centre: discreet entry point and full-screen categorized history */
+.globalNoticeHeadActions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-shrink:0}
+.globalNoticeHeadActions>button{display:inline-grid;place-items:center}
+.globalNoticeHeadActions .globalNoticeViewAll{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:4px 9px;border:1px solid transparent;border-radius:7px;background:transparent;color:#667085;font-size:12px;font-weight:650;white-space:nowrap}
+.globalNoticeHeadActions .globalNoticeViewAll:hover{background:#f2f4f7;border-color:#eaecf0;color:#344054}
+.allNotificationsLayer{position:fixed;inset:0;z-index:32000;display:flex;align-items:stretch;justify-content:stretch;overscroll-behavior:contain}
+.allNotificationsBackdrop{position:absolute;inset:0;background:rgba(13,20,34,.58);backdrop-filter:blur(3px)}
+.allNotificationsPage{position:relative;display:flex;flex-direction:column;width:100%;height:100%;height:100dvh;min-width:0;max-width:none;max-height:none;background:#f7f8fb;color:#172033;overflow:hidden;animation:allNotificationsEnter .18s ease-out}
+.allNotificationsHeader{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-shrink:0;padding:clamp(18px,3vw,32px) clamp(18px,5vw,64px) 22px;background:#fff;border-bottom:1px solid #e4e7ec}
+.allNotificationsHeader>div{min-width:0}
+.allNotificationsHeader p{margin:0 0 6px;color:#667085;font-size:11px;font-weight:750;letter-spacing:.13em}
+.allNotificationsHeader h2{margin:0;color:#172033;font-size:clamp(23px,3vw,32px);font-weight:750;line-height:1.2}
+.allNotificationsHeader span{display:block;margin-top:8px;color:#667085;font-size:14px;line-height:1.45}
+.allNotificationsHeader>button{width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;border:1px solid #e4e7ec;border-radius:11px;background:#fff;color:#344054}
+.allNotificationsHeader>button:hover{background:#f2f4f7}
+.allNotificationsContent{width:100%;max-width:1120px;margin:0 auto;padding:24px clamp(16px,4vw,42px) 48px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;flex:1;min-height:0}
+.allNotificationCategory{margin:0 0 22px;border:1px solid #e4e7ec;border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 2px 5px rgba(16,24,40,.035)}
+.allNotificationCategoryHead{display:flex;align-items:center;gap:11px;padding:16px 18px;border-bottom:1px solid #eaecf0;background:#fff}
+.allNotificationCategoryHead>span{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#f0f4ff;color:#3156a6;flex:0 0 auto}
+.allNotificationCategoryHead h3{margin:0;flex:1;min-width:0;font-size:16px;font-weight:720;line-height:1.35}
+.allNotificationCategoryHead>b{display:grid;place-items:center;min-width:27px;height:27px;padding:0 7px;border-radius:14px;background:#f2f4f7;color:#475467;font-size:12px}
+.allNotificationRow{display:flex;align-items:center;gap:14px;width:100%;min-width:0;padding:15px 18px;border:0;border-bottom:1px solid #f0f1f4;background:#fff;text-align:left;color:#172033}
+.allNotificationRow:last-child{border-bottom:0}
+button.allNotificationRow{cursor:pointer}
+button.allNotificationRow:hover{background:#f8faff}
+.allNotificationRow.isUnread{background:#f8faff}
+.allNotificationRowIcon{display:grid;place-items:center;width:38px;height:38px;flex:0 0 auto;border-radius:10px;background:#f2f4f7;color:#475467}
+.allNotificationRowText{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}
+.allNotificationRowText>b{font-size:14px;line-height:1.4;font-weight:700;overflow-wrap:anywhere}
+.allNotificationRowText>small{font-size:13px;line-height:1.45;color:#667085;overflow-wrap:anywhere}
+.allNotificationRowText>em{font-size:12px;line-height:1.4;color:#3156a6;font-style:normal;font-weight:650}
+.historyRow .allNotificationRowText>em{color:#15803d}
+.allNotificationRowMeta{display:flex;align-items:center;gap:8px;flex:0 0 auto;color:#667085;font-size:12px;white-space:nowrap}
+.allNotificationEmpty{margin:0;padding:19px 20px;color:#667085;font-size:13px;line-height:1.5}
+.historyCategory .allNotificationCategoryHead>span{background:#ecfdf3;color:#15803d}
+@keyframes allNotificationsEnter{from{opacity:.65;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){
+ .allNotificationsHeader{padding:calc(env(safe-area-inset-top,0px) + 18px) 16px 18px;gap:12px}
+ .allNotificationsHeader>button{width:40px;height:40px}
+ .allNotificationsContent{padding:16px 12px calc(env(safe-area-inset-bottom,0px) + 24px)}
+ .allNotificationCategory{margin-bottom:14px;border-radius:12px}
+ .allNotificationCategoryHead{padding:13px 13px;gap:9px}
+ .allNotificationCategoryHead h3{font-size:14px}
+ .allNotificationRow{padding:13px 12px;gap:10px}
+ .allNotificationRowIcon{width:34px;height:34px}
+ .allNotificationRowText>b{font-size:13px}
+ .allNotificationRowText>small{font-size:12px}
+ .allNotificationRowMeta{font-size:11px;gap:3px}
+ .allNotificationRowMeta svg{width:15px;height:15px}
+}
+@media(prefers-reduced-motion:reduce){.allNotificationsPage{animation:none}}
